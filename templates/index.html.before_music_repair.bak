@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naveen ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="hero">
+        <div class="heart">❤️</div>
+        <h1>Happy Birthday, Naveen!</h1>
+        <h2>My love, my favourite person, my forever. 💕</h2>
+
+        <p>
+            Today is a celebration of you and all the happiness
+            you bring into my life. You make ordinary moments special.
+        </p>
+
+        <button onclick="showLetter()">Open Your Surprise 💌</button>
+
+        <section class="letter" id="letter">
+            <h2>My Dearest Naveen ❤️</h2>
+            <p>
+                If I could give you one gift, I would let you see yourself
+                through my eyes. Then you would understand how precious
+                and special you are to me.
+            </p>
+            <p>
+                I wish you happiness, success, laughter, and endless love.
+                I hope I get to celebrate many more birthdays by your side.
+            </p>
+            <h2>Forever yours. 💖</h2>
+        </section>
+
+        <p>Made with endless love, just for you. 🎂</p>
+    </section>
+
+    
+<section class="gallery">
+    <h2>Our Little World 📸</h2>
+    <p>Every memory with you is a favourite memory.</p>
+
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo1.jpg.jpeg') }}"
+                 alt="Our favourite memory">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo2.jpg.jpeg') }}"
+                 alt="A moment to remember">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo3.jpg.jpeg') }}"
+                 alt="Our special memory">
+        </div>
+    </div>
+</section>
+
+    
+<section id="quality-section" class="quality-section">
+  <h2>Five Reasons My Heart Chooses You ??</h2>
+  <p>Tap each little card to discover what I love about you.</p>
+  <div class="quality-cards">
+    <button class="quality-card" onclick="showQuality(0)">??<br>My Gentleman</button>
+    <button class="quality-card" onclick="showQuality(1)">???<br>My Protector</button>
+    <button class="quality-card" onclick="showQuality(2)">??<br>My Calm & Sweet Soul</button>
+    <button class="quality-card" onclick="showQuality(3)">??<br>My Understanding One</button>
+    <button class="quality-card" onclick="showQuality(4)">??<br>My Handsome Boy</button>
+  </div>
+  <div id="quality-popup" class="quality-popup" hidden>
+    <button onclick="closeQuality()" class="popup-close">?</button>
+    <h3 id="quality-title"></h3>
+    <p id="quality-message"></p>
+    <button onclick="nextQuality()" class="popup-next">Next surprise ??</button>
+  </div>
+</section>
+<style>
+.quality-section{text-align:center;padding:40px 16px}
+.quality-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:24px auto}
+.quality-card{padding:20px;border:1px solid #f0a8bd;border-radius:16px;background:#fff0f5;color:#7b2948;font-size:17px;cursor:pointer}
+.quality-popup{position:relative;max-width:460px;margin:20px auto;padding:28px;background:#fff0f5;border:1px solid #efa4bd;border-radius:18px;color:#7b2948}
+.quality-popup[hidden]{display:none}
+.popup-close{position:absolute;right:12px;top:10px;border:0;background:transparent;cursor:pointer;font-size:20px}
+.popup-next{padding:10px 18px;border:0;border-radius:20px;background:#d94f7b;color:white;cursor:pointer}
+</style>
+<script>
+const qualityItems = [
+ ["A True Gentleman ??","Your respect, manners, and the way you treat me make me admire you more every day."],
+ ["Caring & Protective ???","You make me feel cared for and safe. Your little acts of concern mean the world to me."],
+ ["Calm & Sweet ??","Your calm nature and sweetness bring peace to my heart, even on difficult days."],
+ ["Understanding ??","You try to understand my feelings, and that makes me feel loved for who I truly am."],
+ ["My Good-Looking Boy ??","That handsome face of yours still makes my heart skip a beat. You are my favourite view."]
+];
+let qualityIndex = 0;
+function showQuality(i) {
+  qualityIndex = i;
+  document.getElementById("quality-title").textContent = qualityItems[i][0];
+  document.getElementById("quality-message").textContent = qualityItems[i][1];
+  document.getElementById("quality-popup").hidden = false;
+}
+function closeQuality() {
+  document.getElementById("quality-popup").hidden = true;
+}
+function nextQuality() {
+  showQuality((qualityIndex + 1) % qualityItems.length);
+}
+</script>
+
+
+<section id="birthday-surprises" class="surprise-world">
+  <div class="surprise-heading">
+    <span class="pastel-kicker">A LITTLE WORLD MADE FOR YOU</span>
+    <h2>Our Little World of Love 🩷</h2>
+    <p>Five tiny surprises for my favourite person. Explore them one by one!</p>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">💌</div>
+    <h3>1. A Secret Letter</h3>
+    <p>A little message from my heart, just for you.</p>
+    <button class="pastel-btn" onclick="revealSecretLetter()">Open your envelope 💌</button>
+    <div id="secret-letter" class="secret-letter" hidden>
+      <div class="letter-heart">💗</div>
+      <h4>To my favourite person, Naveen</h4>
+      <p>My love, you make ordinary moments feel special just by being in them. Your kindness, your care, your calm nature and that lovely smile of yours mean more to me than words can explain.</p>
+      <p>I hope you always feel as loved, appreciated and special as you make me feel. On your birthday and every day after it, I wish you happiness, peace, success and all the beautiful things your heart deserves.</p>
+      <p class="letter-signoff">With all my love, always. 🩷</p>
+    </div>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">📸</div>
+    <h3>2. Our Little Love Story</h3>
+    <p>Some stories are made of little things that become everything.</p>
+    <div class="memory-timeline">
+      <div class="memory-stop"><span>🌷</span><div><h4>The Beginning</h4><p>Every beautiful story has a beginning. Ours has a special place in my heart.</p></div></div>
+      <div class="memory-stop"><span>🧸</span><div><h4>The Little Things</h4><p>The conversations, the smiles and the little moments I wish I could keep forever.</p></div></div>
+      <div class="memory-stop"><span>💞</span><div><h4>My Favourite Person</h4><p>Somehow, you became the person who makes my days brighter.</p></div></div>
+      <div class="memory-stop"><span>✨</span><div><h4>More Memories Ahead</h4><p>This is just one chapter. I look forward to all the beautiful memories still waiting for us.</p></div></div>
+    </div>
+    <p class="small-note">These are sweet starter messages; we can personalise them with your real memories later.</p>
+  </div>
+
+  <div class="surprise-panel heart-panel">
+    <div class="surprise-icon">💗</div>
+    <h3>3. Tap My Heart</h3>
+    <p>Every tap holds one little reason why you are so special to me.</p>
+    <button class="big-heart" onclick="tapMyHeart()" aria-label="Tap for a love message">💗</button>
+    <p id="heart-message" class="heart-message">Tap the heart, my love!</p>
+    <p id="heart-counter" class="small-note">Your little love notes: 0</p>
+  </div>
+
+  <div class="surprise-panel birthday-panel">
+    <div class="surprise-icon">🎂</div>
+    <h3>4. One Last Birthday Surprise</h3>
+    <p>Ready for a little birthday magic, birthday boy?</p>
+    <button class="pastel-btn" onclick="revealBirthday()">Make a wish, Naveen! 🎉</button>
+    <div id="birthday-reveal" class="birthday-reveal" hidden>
+      <div class="birthday-cake">🎂</div>
+      <h4>Happy Birthday, My Love! 🩷</h4>
+      <p>May your days be full of laughter, your dreams come true, and your heart always find reasons to smile.</p>
+      <p>And if I could make one wish too, it would be for you to feel loved today, tomorrow, and through every chapter ahead. 💗</p>
+      <div id="confetti-area" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">🎵</div>
+    <h3>5. Our Special Song</h3>
+    <p>Choose a song saved on your device to make this moment even more special.</p>
+    <label class="pastel-btn file-pick">Choose our song 🎶
+      <input id="love-song-file" type="file" accept="audio/*">
+    </label>
+    <p id="song-status" class="small-note">Select an audio file from your device to play it here.</p>
+    <audio id="love-song-player" controls hidden></audio>
+  </div>
+  <p class="surprise-footer">Made with all my love, just for you, Naveen 🩷</p>
+</section>
+
+<style>
+.surprise-world{box-sizing:border-box;padding:48px 16px;background:linear-gradient(180deg,#fff5fa,#fff9f0,#fdf3ff);color:#75445f;text-align:center;font-family:inherit}
+.surprise-world *{box-sizing:border-box}
+.surprise-heading{max-width:680px;margin:0 auto 28px}
+.surprise-heading h2{font-size:clamp(26px,5vw,38px);color:#bd608c;margin:10px 0}
+.surprise-heading p{line-height:1.7}
+.pastel-kicker{font-size:12px;letter-spacing:2px;color:#b56e97;font-weight:bold}
+.surprise-panel{max-width:650px;margin:22px auto;padding:26px 20px;border:1px solid #f3d2e3;border-radius:24px;background:rgba(255,255,255,.88);box-shadow:0 8px 25px #e9c5d52b;overflow:hidden}
+.surprise-icon{font-size:35px}
+.surprise-panel h3{color:#bd608c;font-size:23px;margin:10px 0}
+.surprise-panel p{line-height:1.7}
+.pastel-btn{display:inline-block;margin:10px 0;padding:12px 20px;border:0;border-radius:24px;background:#f4c9dd;color:#75445f;font-size:15px;font-weight:bold;cursor:pointer}
+.pastel-btn:hover{background:#edb2cf}
+.secret-letter,.birthday-reveal{margin:20px auto 0;padding:22px;max-width:500px;border-radius:18px;background:#fff5f8;border:1px dashed #e8a9c8;text-align:left}
+.secret-letter h4,.birthday-reveal h4{color:#bd608c;text-align:center;font-size:21px}
+.letter-heart,.birthday-cake{font-size:40px;text-align:center}
+.letter-signoff{font-weight:bold;text-align:center;color:#bd608c}
+.memory-timeline{max-width:480px;margin:24px auto 8px;text-align:left}
+.memory-stop{display:flex;gap:14px;padding:0 0 22px;position:relative}
+.memory-stop>span{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#fff0f6;font-size:22px}
+.memory-stop h4{margin:3px 0;color:#bd608c}
+.memory-stop p{margin:5px 0}
+.small-note{font-size:13px;opacity:.8}
+.big-heart{display:block;margin:20px auto;border:0;background:transparent;font-size:70px;cursor:pointer;animation:softBeat 1.2s infinite}
+.big-heart:active{transform:scale(.88)}
+@keyframes softBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.heart-message{min-height:54px;font-weight:bold;color:#bd608c;font-size:19px}
+.birthday-reveal{text-align:center;position:relative}
+#confetti-area{position:relative;height:55px;overflow:hidden}
+.love-confetti{position:absolute;top:0;font-size:22px;animation:fallingLove 2s ease-in forwards}
+@keyframes fallingLove{from{transform:translateY(-5px) rotate(0);opacity:1}to{transform:translateY(60px) rotate(180deg);opacity:0}}
+.file-pick input{display:none}
+#love-song-player{display:block;width:100%;margin-top:16px}
+.surprise-footer{font-weight:bold;color:#bd608c;margin:32px 0 0}
+@media(max-width:480px){.surprise-panel{padding:22px 15px}.surprise-world{padding:35px 12px}}
+</style>
+
+<script>
+(function(){
+  const letter = document.getElementById("secret-letter");
+  const birthday = document.getElementById("birthday-reveal");
+  const heartMessages = [
+    "You make my heart feel at home. 🏡💗",
+    "Your smile is one of my favourite things. 😊",
+    "I admire the gentleman you are. 🤵",
+    "Thank you for caring for me in your own sweet way. 🧸",
+    "You make ordinary days feel special. ✨",
+    "If I could choose again, I would still choose you. 💞",
+    "You are handsome, inside and out. 😍",
+    "My favourite place is wherever we can share a smile. 🌷",
+    "I am cheering for you in every dream you chase. 🌟",
+    "You are loved more than this little website can say. 🩷"
+  ];
+  let heartCount = 0;
+  let lastHeartIndex = -1;
+
+  window.revealSecretLetter = function(){
+    letter.hidden = !letter.hidden;
+    if(!letter.hidden) letter.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+  window.tapMyHeart = function(){
+    let index = Math.floor(Math.random()*heartMessages.length);
+    if(heartMessages.length > 1 && index === lastHeartIndex) index = (index+1)%heartMessages.length;
+    lastHeartIndex = index;
+    heartCount++;
+    document.getElementById("heart-message").textContent = heartMessages[index];
+    document.getElementById("heart-counter").textContent = "Your little love notes: " + heartCount;
+  };
+
+  window.revealBirthday = function(){
+    birthday.hidden = false;
+    const area = document.getElementById("confetti-area");
+    area.replaceChildren();
+    const symbols = ["💗","💕","✨","🌸","🎉","💖"];
+    for(let i=0;i<24;i++){
+      const piece = document.createElement("span");
+      piece.className = "love-confetti";
+      piece.textContent = symbols[i%symbols.length];
+      piece.style.left = (3 + Math.random()*92) + "%";
+      piece.style.animationDelay = (Math.random()*0.8) + "s";
+      area.appendChild(piece);
+    }
+    birthday.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+  const picker = document.getElementById("love-song-file");
+  const player = document.getElementById("love-song-player");
+  let currentSongUrl = null;
+  picker.addEventListener("change",function(){
+    const file = picker.files && picker.files[0];
+    if(!file) return;
+    if(currentSongUrl) URL.revokeObjectURL(currentSongUrl);
+    currentSongUrl = URL.createObjectURL(file);
+    player.src = currentSongUrl;
+    player.hidden = false;
+    document.getElementById("song-status").textContent = "Selected: " + file.name + ". Press play when you're ready. 🎵";
+  });
+})();
+</script>
+
+
+<!-- Jaan Ban Gaye background music -->
+<div id="jaan-music-dock">
+  <div class="jaan-music-title">🎵 A little song for you, Naveen 🩷</div>
+  <div id="jaan-song-player"></div>
+  <div class="jaan-music-controls">
+    <button id="jaan-start-btn" onclick="startJaanMusic()">💗 Start the Surprise</button>
+    <button id="jaan-toggle-btn" onclick="toggleJaanMusic()" disabled>⏸ Pause</button>
+  </div>
+  <p id="jaan-music-status">Click Start the Surprise to play our song.</p>
+</div>
+
+<style>
+#jaan-music-dock{
+  position:fixed;right:14px;bottom:14px;z-index:9999;
+  width:270px;max-width:calc(100vw - 28px);
+  padding:12px;background:#fff5fa;color:#75445f;
+  border:1px solid #efc4d9;border-radius:20px;
+  box-shadow:0 5px 25px #9d628633;text-align:center;
+  font-family:Arial,sans-serif
+}
+.jaan-music-title{font-size:14px;font-weight:bold;margin-bottom:8px}
+#jaan-song-player{width:240px;height:135px;max-width:100%;margin:auto}
+#jaan-song-player iframe{max-width:100%;border-radius:10px}
+.jaan-music-controls{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.jaan-music-controls button{border:0;border-radius:18px;padding:9px 12px;background:#f2c6dc;color:#75445f;cursor:pointer;font-weight:bold}
+.jaan-music-controls button:disabled{opacity:.55;cursor:default}
+#jaan-music-status{font-size:11px;line-height:1.4;margin:7px 0 0}
+@media(max-width:480px){
+ #jaan-music-dock{right:8px;bottom:8px;width:230px;padding:9px}
+ #jaan-song-player{width:210px;height:118px}
+ .jaan-music-title{font-size:12px}
+}
+</style>
+
+<script>
+(function(){
+  let jaanPlayer = null;
+  let wantsJaanMusic = false;
+  let jaanApiRequested = false;
+  const status = document.getElementById("jaan-music-status");
+  const startButton = document.getElementById("jaan-start-btn");
+  const toggleButton = document.getElementById("jaan-toggle-btn");
+
+  function setStatus(message) {
+    status.textContent = message;
+  }
+
+  window.startJaanMusic = function() {
+    wantsJaanMusic = true;
+    setStatus("Loading Jaan Ban Gaye... 🎶");
+
+    if (jaanPlayer && typeof jaanPlayer.playVideo === "function") {
+      jaanPlayer.playVideo();
+      return;
+    }
+
+    if (!jaanApiRequested) {
+      jaanApiRequested = true;
+      const script = document.createElement("script");
+      script.src = "https://www.youtube.com/iframe_api";
+      script.onerror = function() {
+        setStatus("YouTube could not load. Check your internet connection and refresh.");
+        jaanApiRequested = false;
+      };
+      document.head.appendChild(script);
+    }
+  };
+
+  window.toggleJaanMusic = function() {
+    if (!jaanPlayer) return;
+    const state = jaanPlayer.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+      wantsJaanMusic = false;
+      jaanPlayer.pauseVideo();
+    } else {
+      wantsJaanMusic = true;
+      jaanPlayer.playVideo();
+    }
+  };
+
+  window.onYouTubeIframeAPIReady = function() {
+    jaanPlayer = new YT.Player("jaan-song-player", {
+      width: "240",
+      height: "135",
+      videoId: "a6cJAFFQn_I",
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+        playsinline: 1,
+        rel: 0
+        start: 30,
+      },
+      events: {
+        onReady: function() {
+          toggleButton.disabled = false;
+          setStatus("Ready! Click Start the Surprise to hear our song. 💗");
+          if (wantsJaanMusic) jaanPlayer.playVideo();
+        },
+        onStateChange: function(event) {
+          if (event.data === YT.PlayerState.PLAYING) {
+            startButton.textContent = "🎶 Song is playing";
+            toggleButton.textContent = "⏸ Pause";
+            setStatus("Jaan Ban Gaye is playing for you, Naveen. 🩷");
+          } else if (event.data === YT.PlayerState.PAUSED) {
+            startButton.textContent = "💗 Start the Surprise";
+            toggleButton.textContent = "▶ Play";
+            setStatus("Song paused. Press Play whenever you like.");
+          } else if (event.data === YT.PlayerState.ENDED) {
+            startButton.textContent = "💗 Play Again";
+            toggleButton.textContent = "▶ Play";
+            setStatus("Our song has ended. You can play it again. 🩷");
+          } else if (event.data === YT.PlayerState.UNSTARTED ||
+                     event.data === YT.PlayerState.CUED) {
+            startButton.textContent = "💗 Start the Surprise";
+            toggleButton.textContent = "▶ Play";
+          }
+        },
+        onError: function() {
+          setStatus("YouTube could not play this video here. Try opening the official song on YouTube.");
+        }
+      }
+    });
+  };
+})();
+</script>
+
+<footer>
+        Made with love, just for you, Naveen. ❤️🎂
+    </footer>
+
+    <script>
+        function showLetter() {
+            const letter = document.getElementById("letter");
+            letter.classList.toggle("show");
+
+            if (letter.classList.contains("show")) {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        }
+    </script>
+</body>
+</html>

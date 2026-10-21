@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naveen ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="hero">
+        <div class="heart">❤️</div>
+        <h1>Happy Birthday, Naveen!</h1>
+        <h2>My love, my favourite person, my forever. 💕</h2>
+
+        <p>
+            Today is a celebration of you and all the happiness
+            you bring into my life. You make ordinary moments special.
+        </p>
+
+        <button onclick="showLetter()">Open Your Surprise 💌</button>
+
+        <section class="letter" id="letter">
+            <h2>My Dearest Naveen ❤️</h2>
+            <p>
+                If I could give you one gift, I would let you see yourself
+                through my eyes. Then you would understand how precious
+                and special you are to me.
+            </p>
+            <p>
+                I wish you happiness, success, laughter, and endless love.
+                I hope I get to celebrate many more birthdays by your side.
+            </p>
+            <h2>Forever yours. 💖</h2>
+        </section>
+
+        <p>Made with endless love, just for you. 🎂</p>
+    </section>
+
+    
+<section class="gallery">
+    <h2>Our Little World 📸</h2>
+    <p>Every memory with you is a favourite memory.</p>
+
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo1.jpg.jpeg') }}"
+                 alt="Our favourite memory">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo2.jpg.jpeg') }}"
+                 alt="A moment to remember">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo3.jpg.jpeg') }}"
+                 alt="Our special memory">
+        </div>
+    </div>
+</section>
+
+    
+<section id="quality-section" class="quality-section">
+  <h2>Five Reasons My Heart Chooses You ??</h2>
+  <p>Tap each little card to discover what I love about you.</p>
+  <div class="quality-cards">
+    <button class="quality-card" onclick="showQuality(0)">??<br>My Gentleman</button>
+    <button class="quality-card" onclick="showQuality(1)">???<br>My Protector</button>
+    <button class="quality-card" onclick="showQuality(2)">??<br>My Calm & Sweet Soul</button>
+    <button class="quality-card" onclick="showQuality(3)">??<br>My Understanding One</button>
+    <button class="quality-card" onclick="showQuality(4)">??<br>My Handsome Boy</button>
+  </div>
+  <div id="quality-popup" class="quality-popup" hidden>
+    <button onclick="closeQuality()" class="popup-close">?</button>
+    <h3 id="quality-title"></h3>
+    <p id="quality-message"></p>
+    <button onclick="nextQuality()" class="popup-next">Next surprise ??</button>
+  </div>
+</section>
+<style>
+.quality-section{text-align:center;padding:40px 16px}
+.quality-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:24px auto}
+.quality-card{padding:20px;border:1px solid #f0a8bd;border-radius:16px;background:#fff0f5;color:#7b2948;font-size:17px;cursor:pointer}
+.quality-popup{position:relative;max-width:460px;margin:20px auto;padding:28px;background:#fff0f5;border:1px solid #efa4bd;border-radius:18px;color:#7b2948}
+.quality-popup[hidden]{display:none}
+.popup-close{position:absolute;right:12px;top:10px;border:0;background:transparent;cursor:pointer;font-size:20px}
+.popup-next{padding:10px 18px;border:0;border-radius:20px;background:#d94f7b;color:white;cursor:pointer}
+</style>
+<script>
+const qualityItems = [
+ ["A True Gentleman ??","Your respect, manners, and the way you treat me make me admire you more every day."],
+ ["Caring & Protective ???","You make me feel cared for and safe. Your little acts of concern mean the world to me."],
+ ["Calm & Sweet ??","Your calm nature and sweetness bring peace to my heart, even on difficult days."],
+ ["Understanding ??","You try to understand my feelings, and that makes me feel loved for who I truly am."],
+ ["My Good-Looking Boy ??","That handsome face of yours still makes my heart skip a beat. You are my favourite view."]
+];
+let qualityIndex = 0;
+function showQuality(i) {
+  qualityIndex = i;
+  document.getElementById("quality-title").textContent = qualityItems[i][0];
+  document.getElementById("quality-message").textContent = qualityItems[i][1];
+  document.getElementById("quality-popup").hidden = false;
+}
+function closeQuality() {
+  document.getElementById("quality-popup").hidden = true;
+}
+function nextQuality() {
+  showQuality((qualityIndex + 1) % qualityItems.length);
+}
+</script>
+
+<footer>
+        Made with love, just for you, Naveen. ❤️🎂
+    </footer>
+
+    <script>
+        function showLetter() {
+            const letter = document.getElementById("letter");
+            letter.classList.toggle("show");
+
+            if (letter.classList.contains("show")) {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        }
+    </script>
+</body>
+</html>

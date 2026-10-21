@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naveen ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style id="dreamy-gift-styles">
+#dreamy-gift-surprise {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 65px 18px;
+  text-align: center;
+  color: #fff3ff;
+  background: radial-gradient(ellipse at top, #48316d 0%, #211936 52%, #120f24 100%);
+  font-family: inherit;
+}
+#dreamy-gift-surprise .gift-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, #fff 1px, transparent 1.8px),
+    radial-gradient(circle, #f4caff 1px, transparent 2px);
+  background-size: 53px 59px, 87px 93px;
+  background-position: 4px 9px, 31px 41px;
+  opacity: .55;
+  animation: dreamyGiftStars 12s linear infinite;
+  z-index: -1;
+}
+#dreamy-gift-surprise .gift-content {
+  position: relative;
+  max-width: 620px;
+  margin: auto;
+}
+#dreamy-gift-surprise h2 {
+  color: #ffe5ff;
+  font-size: clamp(27px, 5vw, 38px);
+  text-shadow: 0 0 18px #e6aaff;
+  margin: 0 0 12px;
+}
+#dreamy-gift-surprise .gift-intro {
+  color: #f2defb;
+  line-height: 1.7;
+}
+#dreamy-gift-surprise .gift-stage {
+  width: 230px;
+  height: 225px;
+  max-width: 100%;
+  margin: 28px auto 12px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  filter: drop-shadow(0 0 22px #dca2ff66);
+}
+#dreamy-gift-surprise .gift-box {
+  position: relative;
+  width: 160px;
+  height: 125px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  animation: dreamyGiftFloat 2.8s ease-in-out infinite;
+}
+#dreamy-gift-surprise .gift-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  height: 100px;
+  border-radius: 5px 5px 12px 12px;
+  background: linear-gradient(110deg, #c14f91, #f18fc1 48%, #a73d80);
+  box-shadow: inset 0 0 15px #fff5, 0 12px 25px #09061488;
+}
+#dreamy-gift-surprise .gift-ribbon {
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: 100px;
+  left: 68px;
+  bottom: 0;
+  background: linear-gradient(90deg, #ffe6a3, #fff3ce, #e4b55d);
+}
+#dreamy-gift-surprise .gift-lid {
+  position: absolute;
+  z-index: 3;
+  width: 178px;
+  height: 34px;
+  left: -9px;
+  bottom: 94px;
+  border-radius: 7px;
+  background: linear-gradient(110deg, #df75b2, #ffc0e2, #c04e91);
+  box-shadow: inset 0 3px 7px #fff8;
+  transform-origin: 15px 28px;
+  transition: transform .85s cubic-bezier(.2,.8,.2,1);
+}
+#dreamy-gift-surprise .gift-bow {
+  position: absolute;
+  z-index: 4;
+  bottom: 119px;
+  left: 49px;
+  width: 62px;
+  height: 28px;
+  transition: transform .7s ease, opacity .5s ease;
+}
+#dreamy-gift-surprise .gift-bow:before,
+#dreamy-gift-surprise .gift-bow:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  border: 7px solid #ffe7a7;
+  border-radius: 50% 50% 45% 50%;
+}
+#dreamy-gift-surprise .gift-bow:before {
+  left: -1px;
+  transform: rotate(25deg);
+}
+#dreamy-gift-surprise .gift-bow:after {
+  right: -1px;
+  transform: rotate(-25deg);
+}
+#dreamy-gift-surprise .gift-sparkle {
+  position: absolute;
+  font-size: 25px;
+  color: #fff2b5;
+  animation: dreamyGiftTwinkle 1.8s ease-in-out infinite alternate;
+}
+#dreamy-gift-surprise .sparkle-one { top: 20px; left: 20px; }
+#dreamy-gift-surprise .sparkle-two { top: 3px; right: 18px; animation-delay: .7s; }
+#dreamy-gift-surprise .sparkle-three { bottom: 35px; right: 4px; animation-delay: 1s; }
+#dreamy-gift-surprise .gift-open-button {
+  display: inline-block;
+  margin: 17px 0;
+  padding: 13px 25px;
+  border: 1px solid #ffe4ff;
+  border-radius: 30px;
+  background: linear-gradient(110deg, #d77eb9, #a987e8);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px #dca2ff66;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+#dreamy-gift-surprise .gift-open-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px #e7b4ffbb;
+}
+#dreamy-gift-surprise .gift-open-button:focus-visible,
+#dreamy-gift-surprise .gift-box:focus-visible {
+  outline: 3px solid #fff0a8;
+  outline-offset: 6px;
+}
+#dreamy-gift-surprise .gift-message {
+  max-width: 500px;
+  margin: 8px auto 0;
+  padding: 23px 20px;
+  border: 1px solid #f2c8ff88;
+  border-radius: 20px;
+  background: #ffffff0e;
+  box-shadow: 0 0 30px #c98aff20;
+  line-height: 1.9;
+  animation: dreamyGiftAppear .9s ease both;
+}
+#dreamy-gift-surprise .gift-message h3 {
+  color: #ffe4fa;
+  font-size: 24px;
+  margin-top: 0;
+}
+#dreamy-gift-surprise .gift-message[hidden] {
+  display: none;
+}
+#dreamy-gift-surprise.is-open .gift-lid {
+  transform: translate(-8px, -45px) rotate(-27deg);
+}
+#dreamy-gift-surprise.is-open .gift-bow {
+  transform: translate(-8px, -45px) rotate(-27deg);
+  opacity: 0;
+}
+#dreamy-gift-surprise.is-open .gift-box {
+  animation: none;
+}
+@keyframes dreamyGiftFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes dreamyGiftStars {
+  from { background-position: 4px 9px, 31px 41px; }
+  to { background-position: 4px -110px, 31px -150px; }
+}
+@keyframes dreamyGiftTwinkle {
+  from { opacity: .35; transform: scale(.8) rotate(-12deg); }
+  to { opacity: 1; transform: scale(1.2) rotate(12deg); }
+}
+@keyframes dreamyGiftAppear {
+  from { opacity: 0; transform: translateY(15px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #dreamy-gift-surprise *,
+  #dreamy-gift-surprise *:before,
+  #dreamy-gift-surprise *:after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+
+<style id="naveen-love-quiz-styles">
+#naveen-love-quiz {
+  --quiz-pink: #d95791;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 58px 17px;
+  color: #713c59;
+  text-align: center;
+  background: linear-gradient(145deg, #fff0f6, #fff8fc 48%, #fceafa);
+  font-family: inherit;
+}
+#naveen-love-quiz * { box-sizing: border-box; }
+#naveen-love-quiz .quiz-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+#naveen-love-quiz .quiz-heart {
+  position: absolute;
+  bottom: -35px;
+  color: #ec9fc4;
+  opacity: .45;
+  animation: naveenQuizFloat 9s linear infinite;
+}
+#naveen-love-quiz .quiz-heart:nth-child(1) { left: 8%; font-size: 21px; animation-delay: 0s; }
+#naveen-love-quiz .quiz-heart:nth-child(2) { left: 24%; font-size: 15px; animation-delay: 2s; }
+#naveen-love-quiz .quiz-heart:nth-child(3) { left: 78%; font-size: 24px; animation-delay: 1s; }
+#naveen-love-quiz .quiz-heart:nth-child(4) { left: 91%; font-size: 17px; animation-delay: 4s; }
+#naveen-love-quiz .quiz-heart:nth-child(5) { left: 56%; font-size: 14px; animation-delay: 3s; }
+#naveen-love-quiz .quiz-wrap { position: relative; max-width: 660px; margin: auto; }
+#naveen-love-quiz .quiz-kicker {
+  margin: 0 0 9px;
+  color: #bd5686;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#naveen-love-quiz .quiz-title {
+  margin: 0 0 12px;
+  color: #a83f75;
+  font-size: clamp(27px, 5vw, 39px);
+  text-shadow: 0 2px 12px #f5c2dc;
+}
+#naveen-love-quiz .quiz-intro { line-height: 1.8; margin: 0 auto 24px; }
+#naveen-love-quiz .quiz-card {
+  padding: clamp(19px, 4vw, 30px);
+  border: 1px solid #f1c6dc;
+  border-radius: 24px;
+  background: #ffffffd9;
+  box-shadow: 0 12px 35px #c76b9620;
+  text-align: left;
+}
+#naveen-love-quiz .quiz-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 11px;
+  color: #a45a7b;
+  font-size: 13px;
+  font-weight: 700;
+}
+#naveen-love-quiz .quiz-progress {
+  height: 7px;
+  border-radius: 20px;
+  background: #f8e2ed;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+#naveen-love-quiz .quiz-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ed9fc3, #bd64a0);
+  transition: width .35s ease;
+}
+#naveen-love-quiz .quiz-question {
+  margin: 0 0 18px;
+  color: #743d5a;
+  font-size: clamp(19px, 4vw, 24px);
+  line-height: 1.5;
+}
+#naveen-love-quiz .quiz-options { display: grid; gap: 10px; }
+#naveen-love-quiz .quiz-option {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #efd0e0;
+  border-radius: 14px;
+  background: #fff9fc;
+  color: #75425c;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+#naveen-love-quiz .quiz-option:hover {
+  transform: translateY(-2px);
+  background: #fff0f7;
+  border-color: #df91b6;
+}
+#naveen-love-quiz .quiz-option:focus-visible,
+#naveen-love-quiz .quiz-next:focus-visible,
+#naveen-love-quiz .quiz-restart:focus-visible {
+  outline: 3px solid #c55c91;
+  outline-offset: 3px;
+}
+#naveen-love-quiz .quiz-option:disabled { cursor: default; opacity: .95; }
+#naveen-love-quiz .quiz-option.quiz-correct {
+  background: #f0fbf1;
+  border-color: #83c99a;
+}
+#naveen-love-quiz .quiz-option.quiz-wrong {
+  background: #fff0f4;
+  border-color: #eaa0b7;
+}
+#naveen-love-quiz .quiz-feedback {
+  min-height: 27px;
+  margin: 15px 0 0;
+  color: #a34778;
+  font-weight: 700;
+  line-height: 1.6;
+}
+#naveen-love-quiz .quiz-next,
+#naveen-love-quiz .quiz-restart {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(110deg, #df79a9, #c16cb4);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px #d76a9b30;
+  transition: transform .2s ease;
+}
+#naveen-love-quiz .quiz-next:hover,
+#naveen-love-quiz .quiz-restart:hover { transform: translateY(-2px); }
+#naveen-love-quiz .quiz-next[hidden],
+#naveen-love-quiz .quiz-result[hidden] { display: none; }
+#naveen-love-quiz .quiz-result {
+  text-align: center;
+  padding: 8px 2px 4px;
+  animation: naveenQuizAppear .6s ease both;
+}
+#naveen-love-quiz .quiz-result-heart {
+  font-size: 52px;
+  margin: 5px 0 12px;
+  animation: naveenQuizPulse 1.5s ease-in-out infinite;
+}
+#naveen-love-quiz .quiz-result h3 {
+  color: #a83f75;
+  font-size: clamp(23px, 4vw, 31px);
+  margin: 0 0 12px;
+}
+#naveen-love-quiz .quiz-result p { line-height: 1.9; }
+#naveen-love-quiz .quiz-score {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: #fde5f0;
+  color: #a13f72;
+  font-weight: 700;
+}
+#naveen-love-quiz .quiz-signoff { color: #bb5588; font-weight: 700; }
+@keyframes naveenQuizFloat {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .5; }
+  85% { opacity: .45; }
+  100% { transform: translateY(-600px) rotate(25deg); opacity: 0; }
+}
+@keyframes naveenQuizAppear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes naveenQuizPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #naveen-love-quiz *,
+  #naveen-love-quiz *::before,
+  #naveen-love-quiz *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+</head>
+<body>
+    <section class="hero">
+        <div class="heart">❤️</div>
+        <h1>Happy Birthday, Naveen!</h1>
+        <h2>My love, my favourite person, my forever. 💕</h2>
+
+        <p>
+            Today is a celebration of you and all the happiness
+            you bring into my life. You make ordinary moments special.
+        </p>
+
+        <button onclick="showLetter()">Open Your Surprise 💌</button>
+
+        <section class="letter" id="letter">
+            <h2>My Dearest Naveen ❤️</h2>
+            <p>
+                If I could give you one gift, I would let you see yourself
+                through my eyes. Then you would understand how precious
+                and special you are to me.
+            </p>
+            <p>
+                I wish you happiness, success, laughter, and endless love.
+                I hope I get to celebrate many more birthdays by your side.
+            </p>
+            <h2>Forever yours. 💖</h2>
+        </section>
+
+        <p>Made with endless love, just for you. 🎂</p>
+    </section>
+
+    
+<section class="gallery">
+    <h2>Our Little World 📸</h2>
+    <p>Every memory with you is a favourite memory.</p>
+
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo1.jpg.jpeg') }}"
+                 alt="Our favourite memory">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo2.jpg.jpeg') }}"
+                 alt="A moment to remember">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo3.jpg.jpeg') }}"
+                 alt="Our special memory">
+        </div>
+    </div>
+</section>
+
+    
+<section id="quality-section" class="quality-section">
+  <h2>Five Reasons My Heart Chooses You ??</h2>
+  <p>Tap each little card to discover what I love about you.</p>
+  <div class="quality-cards">
+    <button class="quality-card" onclick="showQuality(0)">&#10084; My Gentleman</button>
+    <button class="quality-card" onclick="showQuality(1)">&#128153; My Caring &amp; Protective One</button>
+    <button class="quality-card" onclick="showQuality(2)">&#10024; My Calm &amp; Sweet Soul</button>
+    <button class="quality-card" onclick="showQuality(3)">&#127775; My Understanding One</button>
+    <button class="quality-card" onclick="showQuality(4)">&#128150; My Handsome Boy</button>
+  </div>
+  <div id="quality-popup" class="quality-popup" hidden>
+    <button onclick="closeQuality()" class="popup-close">?</button>
+    <h3 id="quality-title"></h3>
+    <p id="quality-message"></p>
+    <button onclick="nextQuality()" class="popup-next">Next surprise ??</button>
+  </div>
+</section>
+<style>
+.quality-section{text-align:center;padding:40px 16px}
+.quality-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:24px auto}
+.quality-card{padding:20px;border:1px solid #f0a8bd;border-radius:16px;background:#fff0f5;color:#7b2948;font-size:17px;cursor:pointer}
+.quality-popup{position:relative;max-width:460px;margin:20px auto;padding:28px;background:#fff0f5;border:1px solid #efa4bd;border-radius:18px;color:#7b2948}
+.quality-popup[hidden]{display:none}
+.popup-close{position:absolute;right:12px;top:10px;border:0;background:transparent;cursor:pointer;font-size:20px}
+.popup-next{padding:10px 18px;border:0;border-radius:20px;background:#d94f7b;color:white;cursor:pointer}
+</style>
+<script>
+const qualityItems = [
+ ["A True Gentleman ??","Your respect, manners, and the way you treat me make me admire you more every day."],
+ ["Caring & Protective ???","You make me feel cared for and safe. Your little acts of concern mean the world to me."],
+ ["Calm & Sweet ??","Your calm nature and sweetness bring peace to my heart, even on difficult days."],
+ ["Understanding ??","You try to understand my feelings, and that makes me feel loved for who I truly am."],
+ ["My Good-Looking Boy ??","That handsome face of yours still makes my heart skip a beat. You are my favourite view."]
+];
+let qualityIndex = 0;
+function showQuality(i) {
+  qualityIndex = i;
+  document.getElementById("quality-title").textContent = qualityItems[i][0];
+  document.getElementById("quality-message").textContent = qualityItems[i][1];
+  document.getElementById("quality-popup").hidden = false;
+}
+function closeQuality() {
+  document.getElementById("quality-popup").hidden = true;
+}
+function nextQuality() {
+  showQuality((qualityIndex + 1) % qualityItems.length);
+}
+</script>
+
+
+<section id="birthday-surprises" class="surprise-world">
+  <div class="surprise-heading">
+    <span class="pastel-kicker">A LITTLE WORLD MADE FOR YOU</span>
+    <h2>Our Little World of Love 🩷</h2>
+    <p>Five tiny surprises for my favourite person. Explore them one by one!</p>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">💌</div>
+    <h3>1. A Secret Letter</h3>
+    <p>A little message from my heart, just for you.</p>
+    <button class="pastel-btn" onclick="revealSecretLetter()">Open your envelope 💌</button>
+    <div id="secret-letter" class="secret-letter" hidden>
+      <div class="letter-heart">💗</div>
+      <h4>To my favourite person, Naveen</h4>
+      <p>My love, you make ordinary moments feel special just by being in them. Your kindness, your care, your calm nature and that lovely smile of yours mean more to me than words can explain.</p>
+      <p>I hope you always feel as loved, appreciated and special as you make me feel. On your birthday and every day after it, I wish you happiness, peace, success and all the beautiful things your heart deserves.</p>
+      <p class="letter-signoff">With all my love, always. 🩷</p>
+    </div>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">📸</div>
+    <h3>2. Our Little Love Story</h3>
+    <p>Some stories are made of little things that become everything.</p>
+    <div class="memory-timeline">
+      <div class="memory-stop"><span>🌷</span><div><h4>The Beginning</h4><p>Every beautiful story has a beginning. Ours has a special place in my heart.</p></div></div>
+      <div class="memory-stop"><span>🧸</span><div><h4>The Little Things</h4><p>The conversations, the smiles and the little moments I wish I could keep forever.</p></div></div>
+      <div class="memory-stop"><span>💞</span><div><h4>My Favourite Person</h4><p>Somehow, you became the person who makes my days brighter.</p></div></div>
+      <div class="memory-stop"><span>✨</span><div><h4>More Memories Ahead</h4><p>This is just one chapter. I look forward to all the beautiful memories still waiting for us.</p></div></div>
+    </div>
+    <p class="small-note">These are sweet starter messages; we can personalise them with your real memories later.</p>
+  </div>
+
+  <div class="surprise-panel heart-panel">
+    <div class="surprise-icon">💗</div>
+    <h3>3. Tap My Heart</h3>
+    <p>Every tap holds one little reason why you are so special to me.</p>
+    <button class="big-heart" onclick="tapMyHeart()" aria-label="Tap for a love message">💗</button>
+    <p id="heart-message" class="heart-message">Tap the heart, my love!</p>
+    <p id="heart-counter" class="small-note">Your little love notes: 0</p>
+  </div>
+
+  <div class="surprise-panel birthday-panel">
+    <div class="surprise-icon">🎂</div>
+    <h3>4. One Last Birthday Surprise</h3>
+    <p>Ready for a little birthday magic, birthday boy?</p>
+    <button class="pastel-btn" onclick="revealBirthday()">Make a wish, Naveen! 🎉</button>
+    <div id="birthday-reveal" class="birthday-reveal" hidden>
+      <div class="birthday-cake">🎂</div>
+      <h4>Happy Birthday, My Love! 🩷</h4>
+      <p>May your days be full of laughter, your dreams come true, and your heart always find reasons to smile.</p>
+      <p>And if I could make one wish too, it would be for you to feel loved today, tomorrow, and through every chapter ahead. 💗</p>
+      <div id="confetti-area" aria-hidden="true"></div>
+    </div>
+  </div>
+<p class="surprise-footer">Made with all my love, just for you, Naveen 🩷</p>
+</section>
+
+<style>
+.surprise-world{box-sizing:border-box;padding:48px 16px;background:linear-gradient(180deg,#fff5fa,#fff9f0,#fdf3ff);color:#75445f;text-align:center;font-family:inherit}
+.surprise-world *{box-sizing:border-box}
+.surprise-heading{max-width:680px;margin:0 auto 28px}
+.surprise-heading h2{font-size:clamp(26px,5vw,38px);color:#bd608c;margin:10px 0}
+.surprise-heading p{line-height:1.7}
+.pastel-kicker{font-size:12px;letter-spacing:2px;color:#b56e97;font-weight:bold}
+.surprise-panel{max-width:650px;margin:22px auto;padding:26px 20px;border:1px solid #f3d2e3;border-radius:24px;background:rgba(255,255,255,.88);box-shadow:0 8px 25px #e9c5d52b;overflow:hidden}
+.surprise-icon{font-size:35px}
+.surprise-panel h3{color:#bd608c;font-size:23px;margin:10px 0}
+.surprise-panel p{line-height:1.7}
+.pastel-btn{display:inline-block;margin:10px 0;padding:12px 20px;border:0;border-radius:24px;background:#f4c9dd;color:#75445f;font-size:15px;font-weight:bold;cursor:pointer}
+.pastel-btn:hover{background:#edb2cf}
+.secret-letter,.birthday-reveal{margin:20px auto 0;padding:22px;max-width:500px;border-radius:18px;background:#fff5f8;border:1px dashed #e8a9c8;text-align:left}
+.secret-letter h4,.birthday-reveal h4{color:#bd608c;text-align:center;font-size:21px}
+.letter-heart,.birthday-cake{font-size:40px;text-align:center}
+.letter-signoff{font-weight:bold;text-align:center;color:#bd608c}
+.memory-timeline{max-width:480px;margin:24px auto 8px;text-align:left}
+.memory-stop{display:flex;gap:14px;padding:0 0 22px;position:relative}
+.memory-stop>span{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#fff0f6;font-size:22px}
+.memory-stop h4{margin:3px 0;color:#bd608c}
+.memory-stop p{margin:5px 0}
+.small-note{font-size:13px;opacity:.8}
+.big-heart{display:block;margin:20px auto;border:0;background:transparent;font-size:70px;cursor:pointer;animation:softBeat 1.2s infinite}
+.big-heart:active{transform:scale(.88)}
+@keyframes softBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.heart-message{min-height:54px;font-weight:bold;color:#bd608c;font-size:19px}
+.birthday-reveal{text-align:center;position:relative}
+#confetti-area{position:relative;height:55px;overflow:hidden}
+.love-confetti{position:absolute;top:0;font-size:22px;animation:fallingLove 2s ease-in forwards}
+@keyframes fallingLove{from{transform:translateY(-5px) rotate(0);opacity:1}to{transform:translateY(60px) rotate(180deg);opacity:0}}
+
+
+.surprise-footer{font-weight:bold;color:#bd608c;margin:32px 0 0}
+@media(max-width:480px){.surprise-panel{padding:22px 15px}.surprise-world{padding:35px 12px}}
+</style>
+
+<script>
+(function(){
+  const letter = document.getElementById("secret-letter");
+  const birthday = document.getElementById("birthday-reveal");
+  const heartMessages = [
+    "You make my heart feel at home. 🏡💗",
+    "Your smile is one of my favourite things. 😊",
+    "I admire the gentleman you are. 🤵",
+    "Thank you for caring for me in your own sweet way. 🧸",
+    "You make ordinary days feel special. ✨",
+    "If I could choose again, I would still choose you. 💞",
+    "You are handsome, inside and out. 😍",
+    "My favourite place is wherever we can share a smile. 🌷",
+    "I am cheering for you in every dream you chase. 🌟",
+    "You are loved more than this little website can say. 🩷"
+  ];
+  let heartCount = 0;
+  let lastHeartIndex = -1;
+
+  window.revealSecretLetter = function(){
+    letter.hidden = !letter.hidden;
+    if(!letter.hidden) letter.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+  window.tapMyHeart = function(){
+    let index = Math.floor(Math.random()*heartMessages.length);
+    if(heartMessages.length > 1 && index === lastHeartIndex) index = (index+1)%heartMessages.length;
+    lastHeartIndex = index;
+    heartCount++;
+    document.getElementById("heart-message").textContent = heartMessages[index];
+    document.getElementById("heart-counter").textContent = "Your little love notes: " + heartCount;
+  };
+
+  window.revealBirthday = function(){
+    birthday.hidden = false;
+    const area = document.getElementById("confetti-area");
+    area.replaceChildren();
+    const symbols = ["💗","💕","✨","🌸","🎉","💖"];
+    for(let i=0;i<24;i++){
+      const piece = document.createElement("span");
+      piece.className = "love-confetti";
+      piece.textContent = symbols[i%symbols.length];
+      piece.style.left = (3 + Math.random()*92) + "%";
+      piece.style.animationDelay = (Math.random()*0.8) + "s";
+      area.appendChild(piece);
+    }
+    birthday.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+})();
+</script>
+
+
+<!-- Jaan Ban Gaye local audio player -->
+<div id="jaan-music-dock">
+  <div class="jaan-music-title">A little song for you, Naveen</div>
+  <audio id="jaan-local-audio" preload="metadata">
+    <source src="{{ url_for('static', filename='music/jaan_ban_gaye.mp3') }}" type="audio/mpeg">
+  </audio>
+  <div class="jaan-music-controls">
+    <button id="jaan-start-btn" onclick="startJaanMusic()">Start the Surprise</button>
+    <button id="jaan-toggle-btn" onclick="toggleJaanMusic()" disabled>Play</button>
+  </div>
+  <p id="jaan-music-status">Click Start the Surprise to play our song.</p>
+</div>
+
+<style>
+#jaan-music-dock{position:fixed;right:14px;bottom:14px;z-index:99999;width:300px;max-width:calc(100vw - 28px);padding:13px;background:#fff5fa;color:#75445f;border:1px solid #efc4d9;border-radius:22px;box-shadow:0 5px 25px #9d628633;text-align:center;font-family:Arial,sans-serif}
+.jaan-music-title{font-size:14px;font-weight:bold;margin-bottom:8px}
+.jaan-music-controls{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.jaan-music-controls button{position:relative;z-index:2;border:0;border-radius:22px;padding:11px 13px;background:#f2c6dc;color:#75445f;cursor:pointer;font-weight:bold}
+.jaan-music-controls button:disabled{opacity:.55;cursor:default}
+#jaan-music-status{font-size:12px;line-height:1.4;margin:8px 0 0}
+@media(max-width:480px){ #jaan-music-dock{right:8px;bottom:8px;width:255px}}
+</style>
+
+<script>
+(function(){
+  const audio = document.getElementById("jaan-local-audio");
+  const start = document.getElementById("jaan-start-btn");
+  const toggle = document.getElementById("jaan-toggle-btn");
+  const status = document.getElementById("jaan-music-status");
+  let started = false;
+
+  async function playSong(skipIntro) {
+    try {
+      if (audio.readyState < 1) {
+        status.textContent = "Loading our song...";
+        await new Promise((resolve, reject) => {
+          audio.addEventListener("loadedmetadata", resolve, {once:true});
+          audio.addEventListener("error", reject, {once:true});
+          audio.load();
+        });
+      }
+
+      if (skipIntro && !started && Number.isFinite(audio.duration) && audio.duration > 31) {
+        audio.currentTime = 30;
+      }
+
+      await audio.play();
+      started = true;
+      toggle.disabled = false;
+      toggle.textContent = "Pause";
+      start.textContent = "Start the Surprise";
+      status.textContent = "Enjoy our song, Naveen!";
+    } catch (error) {
+      status.textContent = "Couldn't play the song. Check that the MP3 file is present and try again.";
+      console.error("Jaan Ban Gaye playback error:", error);
+    }
+  }
+
+  window.startJaanMusic = function() {
+    playSong(true);
+  };
+
+  window.toggleJaanMusic = function() {
+    if (audio.paused) {
+      playSong(false);
+    } else {
+      audio.pause();
+      toggle.textContent = "Play";
+      status.textContent = "Song paused. Resume whenever you like.";
+    }
+  };
+
+  audio.addEventListener("ended", function() {
+    toggle.textContent = "Play";
+    status.textContent = "Our song has finished.";
+  });
+
+  audio.addEventListener("error", function() {
+    status.textContent = "Audio file couldn't load. Please check the MP3 path.";
+  });
+})();
+</script>
+
+<footer>
+        Made with love, just for you, Naveen. ❤️🎂
+    </footer>
+
+    <script>
+        function showLetter() {
+            const letter = document.getElementById("letter");
+            letter.classList.toggle("show");
+
+            if (letter.classList.contains("show")) {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        }
+    </script>
+
+<!-- Dreamy animated birthday gift for Naveen -->
+<section id="dreamy-gift-surprise" aria-labelledby="dreamy-gift-heading">
+  <div class="gift-stars" aria-hidden="true"></div>
+  <div class="gift-content">
+    <p aria-hidden="true" style="font-size:28px;margin:0 0 12px">✦ ✧ ✦</p>
+    <h2 id="dreamy-gift-heading">One Last Little Surprise ✨</h2>
+    <p class="gift-intro">
+      Naveen, there is one more little gift waiting just for you.<br>
+      Make a wish, then open your present. 🎁
+    </p>
+
+    <div class="gift-stage">
+      <span class="gift-sparkle sparkle-one" aria-hidden="true">✧</span>
+      <span class="gift-sparkle sparkle-two" aria-hidden="true">✦</span>
+      <span class="gift-sparkle sparkle-three" aria-hidden="true">✧</span>
+      <button type="button" class="gift-box" id="dreamy-gift-box"
+              aria-label="Open the birthday gift" aria-expanded="false"
+              aria-controls="dreamy-gift-message">
+        <span class="gift-base" aria-hidden="true"></span>
+        <span class="gift-ribbon" aria-hidden="true"></span>
+        <span class="gift-lid" aria-hidden="true"></span>
+        <span class="gift-bow" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <button type="button" class="gift-open-button" id="dreamy-gift-open">
+      Open Your Gift ✨
+    </button>
+
+    <div class="gift-message" id="dreamy-gift-message" hidden>
+      <h3>To My Favourite Person, Naveen 💗</h3>
+      <p>
+        If I could wrap up every reason you make me smile,
+        every moment you make me feel cared for, and every little
+        thing I adore about you, this gift still wouldn't be big enough.
+      </p>
+      <p>
+        My wish for you is a life full of happiness, peace, beautiful
+        dreams, and all the love your heart deserves.
+      </p>
+      <p>
+        Thank you for being you. You are a gift in my life, too. 🌙
+      </p>
+      <p style="font-size:22px;margin-bottom:0">Happy Birthday, my special one! 💖</p>
+    </div>
+  </div>
+</section>
+
+<script id="dreamy-gift-script">
+(function () {
+  const section = document.getElementById("dreamy-gift-surprise");
+  if (!section) return;
+
+  const box = document.getElementById("dreamy-gift-box");
+  const openButton = document.getElementById("dreamy-gift-open");
+  const message = document.getElementById("dreamy-gift-message");
+
+  function openGift() {
+    if (section.classList.contains("is-open")) return;
+    section.classList.add("is-open");
+    box.setAttribute("aria-expanded", "true");
+    message.hidden = false;
+    openButton.textContent = "Your Surprise Is Opened 💖";
+    openButton.disabled = true;
+  }
+
+  box.addEventListener("click", openGift);
+  openButton.addEventListener("click", openGift);
+})();
+</script>
+
+
+<!-- Romantic relationship mini-quiz -->
+<section id="naveen-love-quiz" aria-labelledby="naveen-quiz-heading">
+  <div class="quiz-hearts" aria-hidden="true">
+    <span class="quiz-heart">♡</span><span class="quiz-heart">♥</span>
+    <span class="quiz-heart">♡</span><span class="quiz-heart">♥</span>
+    <span class="quiz-heart">♡</span>
+  </div>
+  <div class="quiz-wrap">
+    <p class="quiz-kicker">A little game made with love</p>
+    <h2 class="quiz-title" id="naveen-quiz-heading">How Well Do You Know Our Love? 💞</h2>
+    <p class="quiz-intro">
+      Naveen, let's see how well you know the little things that make
+      this birthday page special. Choose your answers and unlock your message! 💗
+    </p>
+
+    <div class="quiz-card">
+      <div id="naveen-quiz-game">
+        <div class="quiz-progress-row">
+          <span id="naveen-quiz-count">Question 1 of 4</span>
+          <span id="naveen-quiz-score-label">Hearts collected: 0 💗</span>
+        </div>
+        <div class="quiz-progress" aria-hidden="true">
+          <div class="quiz-progress-fill" id="naveen-quiz-progress"></div>
+        </div>
+        <h3 class="quiz-question" id="naveen-quiz-question"></h3>
+        <div class="quiz-options" id="naveen-quiz-options"></div>
+        <p class="quiz-feedback" id="naveen-quiz-feedback" aria-live="polite"></p>
+        <button class="quiz-next" id="naveen-quiz-next" type="button" hidden>Next question →</button>
+      </div>
+
+      <div class="quiz-result" id="naveen-quiz-result" hidden aria-live="polite">
+        <div class="quiz-result-heart" aria-hidden="true">💗</div>
+        <h3 id="naveen-quiz-result-title">A little message for you</h3>
+        <div class="quiz-score" id="naveen-quiz-final-score"></div>
+        <p>
+          No quiz could ever measure how special you are to me.
+          Every little thing about you makes this story ours,
+          and I would choose to celebrate you over and over again.
+        </p>
+        <p>
+          I hope this new year of your life brings you endless smiles,
+          peaceful days, beautiful dreams, and all the love you deserve.
+        </p>
+        <p class="quiz-signoff">Happy Birthday, Naveen. You mean so much to me. 🌷</p>
+        <button class="quiz-restart" id="naveen-quiz-restart" type="button">Play Again 💕</button>
+      </div>
+    </div>
+    <p style="margin:20px 0 0;font-size:13px;color:#a55c7c">Made with a little pink, a lot of love, and all my heart. ✨</p>
+  </div>
+</section>
+
+<script id="naveen-love-quiz-script">
+(function () {
+  const root = document.getElementById("naveen-love-quiz");
+  if (!root || root.dataset.initialized === "true") return;
+  root.dataset.initialized = "true";
+
+  const questions = [
+    {
+      question: "Which song has its own special place on this birthday page? 🎵",
+      options: ["Jaan Ban Gaye", "A random party song", "No song at all"],
+      answer: 0,
+      note: "Of course — Jaan Ban Gaye, our special song. 🎶"
+    },
+    {
+      question: "Which of these qualities makes you so special on this page? 💗",
+      options: [
+        "Being caring and protective",
+        "Being understanding and sweet",
+        "All those lovely qualities together"
+      ],
+      answer: 2,
+      note: "All of them together make you wonderfully you. 🩷"
+    },
+    {
+      question: "What is the most important part of a birthday surprise? 🎁",
+      options: [
+        "The most expensive present",
+        "The love and thought behind it",
+        "The number of decorations"
+      ],
+      answer: 1,
+      note: "It's the love behind every little detail. 💌"
+    },
+    {
+      question: "What is my birthday wish for you? 🌷",
+      options: [
+        "A year full of happiness and beautiful dreams",
+        "A heart that always feels loved",
+        "All the happiness and love you deserve"
+      ],
+      answer: 2,
+      note: "Every bit of happiness in the world, just for you. ✨"
+    }
+  ];
+
+  const game = document.getElementById("naveen-quiz-game");
+  const count = document.getElementById("naveen-quiz-count");
+  const scoreLabel = document.getElementById("naveen-quiz-score-label");
+  const progress = document.getElementById("naveen-quiz-progress");
+  const questionTitle = document.getElementById("naveen-quiz-question");
+  const optionsBox = document.getElementById("naveen-quiz-options");
+  const feedback = document.getElementById("naveen-quiz-feedback");
+  const nextButton = document.getElementById("naveen-quiz-next");
+  const result = document.getElementById("naveen-quiz-result");
+  const resultTitle = document.getElementById("naveen-quiz-result-title");
+  const finalScore = document.getElementById("naveen-quiz-final-score");
+  const restart = document.getElementById("naveen-quiz-restart");
+
+  let index = 0;
+  let score = 0;
+  let answered = false;
+
+  function renderQuestion() {
+    answered = false;
+    const item = questions[index];
+    count.textContent = "Question " + (index + 1) + " of " + questions.length;
+    scoreLabel.textContent = "Hearts collected: " + score + " 💗";
+    progress.style.width = ((index / questions.length) * 100) + "%";
+    questionTitle.textContent = item.question;
+    feedback.textContent = "";
+    nextButton.hidden = true;
+    nextButton.textContent = index === questions.length - 1 ? "Reveal my message 💌" : "Next question →";
+    optionsBox.replaceChildren();
+
+    item.options.forEach(function (option, optionIndex) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "quiz-option";
+      button.textContent = option;
+      button.addEventListener("click", function () {
+        if (answered) return;
+        answered = true;
+        const correct = optionIndex === item.answer;
+        if (correct) score++;
+        Array.from(optionsBox.children).forEach(function (choice, i) {
+          choice.disabled = true;
+          if (i === item.answer) choice.classList.add("quiz-correct");
+          else if (i === optionIndex) choice.classList.add("quiz-wrong");
+        });
+        feedback.textContent = correct
+          ? "That's right! " + item.note
+          : "A little hint from me: " + item.note;
+        scoreLabel.textContent = "Hearts collected: " + score + " 💗";
+        progress.style.width = (((index + 1) / questions.length) * 100) + "%";
+        nextButton.hidden = false;
+      });
+      optionsBox.appendChild(button);
+    });
+  }
+
+  function showResult() {
+    game.hidden = true;
+    result.hidden = false;
+    progress.style.width = "100%";
+    finalScore.textContent = "You collected " + score + " out of " + questions.length + " hearts 💗";
+    resultTitle.textContent = score === questions.length
+      ? "You know this little love story! 💖"
+      : "Every answer leads back to love 💕";
+    result.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  nextButton.addEventListener("click", function () {
+    if (!answered) return;
+    if (index < questions.length - 1) {
+      index++;
+      renderQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  restart.addEventListener("click", function () {
+    index = 0;
+    score = 0;
+    result.hidden = true;
+    game.hidden = false;
+    renderQuestion();
+    root.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  renderQuestion();
+})();
+</script>
+
+</body>
+</html>

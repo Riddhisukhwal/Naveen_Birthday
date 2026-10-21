@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --pink: #ff8eae;
+    --dark-pink: #c2184b;
+    --wine: #781a3c;
+    --cream: #fff7f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--wine);
+    background: var(--cream);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px 22px;
+    background:
+        radial-gradient(circle at 15% 20%, #ffffffb8, transparent 30%),
+        linear-gradient(145deg, #ffe4ec, #ffc0d2, #fff0f5);
+}
+
+.heart {
+    font-size: 65px;
+    animation: heartbeat 1.1s infinite alternate;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: clamp(48px, 9vw, 88px);
+    margin: 12px 0;
+}
+
+h2 {
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+p {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.hero > p {
+    max-width: 650px;
+}
+
+button {
+    background: var(--dark-pink);
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    font: inherit;
+    cursor: pointer;
+    transition: transform .25s, background .25s;
+}
+
+button:hover {
+    background: var(--wine);
+    transform: translateY(-3px);
+}
+
+.letter {
+    display: none;
+    width: min(650px, 100%);
+    padding: 25px;
+    margin: 25px auto;
+    border: 1px solid #f6b7ca;
+    border-radius: 24px;
+    background: #ffffffd9;
+    box-shadow: 0 12px 35px #a12b4c17;
+    animation: appear .5s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+.gallery {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 48px;
+}
+
+.photo-grid {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: white;
+    border: 1px solid #f5c0d0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #9b244012;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.photo-placeholder {
+    padding: 30px 15px;
+    color: #a44766;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #ffe4ec;
+}
+
+@keyframes heartbeat {
+    to { transform: scale(1.15); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Gallery photo layout fix */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    align-items: stretch;
+}
+
+.photo-card {
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.photo-card .gallery-photo {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+@media (max-width: 700px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .photo-card .gallery-photo {
+        height: 320px;
+    }
+}
+

@@ -1,0 +1,1412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naveen ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style id="dreamy-gift-styles">
+#dreamy-gift-surprise {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 65px 18px;
+  text-align: center;
+  color: #fff3ff;
+  background: radial-gradient(ellipse at top, #48316d 0%, #211936 52%, #120f24 100%);
+  font-family: inherit;
+}
+#dreamy-gift-surprise .gift-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, #fff 1px, transparent 1.8px),
+    radial-gradient(circle, #f4caff 1px, transparent 2px);
+  background-size: 53px 59px, 87px 93px;
+  background-position: 4px 9px, 31px 41px;
+  opacity: .55;
+  animation: dreamyGiftStars 12s linear infinite;
+  z-index: -1;
+}
+#dreamy-gift-surprise .gift-content {
+  position: relative;
+  max-width: 620px;
+  margin: auto;
+}
+#dreamy-gift-surprise h2 {
+  color: #ffe5ff;
+  font-size: clamp(27px, 5vw, 38px);
+  text-shadow: 0 0 18px #e6aaff;
+  margin: 0 0 12px;
+}
+#dreamy-gift-surprise .gift-intro {
+  color: #f2defb;
+  line-height: 1.7;
+}
+#dreamy-gift-surprise .gift-stage {
+  width: 230px;
+  height: 225px;
+  max-width: 100%;
+  margin: 28px auto 12px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  filter: drop-shadow(0 0 22px #dca2ff66);
+}
+#dreamy-gift-surprise .gift-box {
+  position: relative;
+  width: 160px;
+  height: 125px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  animation: dreamyGiftFloat 2.8s ease-in-out infinite;
+}
+#dreamy-gift-surprise .gift-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  height: 100px;
+  border-radius: 5px 5px 12px 12px;
+  background: linear-gradient(110deg, #c14f91, #f18fc1 48%, #a73d80);
+  box-shadow: inset 0 0 15px #fff5, 0 12px 25px #09061488;
+}
+#dreamy-gift-surprise .gift-ribbon {
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: 100px;
+  left: 68px;
+  bottom: 0;
+  background: linear-gradient(90deg, #ffe6a3, #fff3ce, #e4b55d);
+}
+#dreamy-gift-surprise .gift-lid {
+  position: absolute;
+  z-index: 3;
+  width: 178px;
+  height: 34px;
+  left: -9px;
+  bottom: 94px;
+  border-radius: 7px;
+  background: linear-gradient(110deg, #df75b2, #ffc0e2, #c04e91);
+  box-shadow: inset 0 3px 7px #fff8;
+  transform-origin: 15px 28px;
+  transition: transform .85s cubic-bezier(.2,.8,.2,1);
+}
+#dreamy-gift-surprise .gift-bow {
+  position: absolute;
+  z-index: 4;
+  bottom: 119px;
+  left: 49px;
+  width: 62px;
+  height: 28px;
+  transition: transform .7s ease, opacity .5s ease;
+}
+#dreamy-gift-surprise .gift-bow:before,
+#dreamy-gift-surprise .gift-bow:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  border: 7px solid #ffe7a7;
+  border-radius: 50% 50% 45% 50%;
+}
+#dreamy-gift-surprise .gift-bow:before {
+  left: -1px;
+  transform: rotate(25deg);
+}
+#dreamy-gift-surprise .gift-bow:after {
+  right: -1px;
+  transform: rotate(-25deg);
+}
+#dreamy-gift-surprise .gift-sparkle {
+  position: absolute;
+  font-size: 25px;
+  color: #fff2b5;
+  animation: dreamyGiftTwinkle 1.8s ease-in-out infinite alternate;
+}
+#dreamy-gift-surprise .sparkle-one { top: 20px; left: 20px; }
+#dreamy-gift-surprise .sparkle-two { top: 3px; right: 18px; animation-delay: .7s; }
+#dreamy-gift-surprise .sparkle-three { bottom: 35px; right: 4px; animation-delay: 1s; }
+#dreamy-gift-surprise .gift-open-button {
+  display: inline-block;
+  margin: 17px 0;
+  padding: 13px 25px;
+  border: 1px solid #ffe4ff;
+  border-radius: 30px;
+  background: linear-gradient(110deg, #d77eb9, #a987e8);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px #dca2ff66;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+#dreamy-gift-surprise .gift-open-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px #e7b4ffbb;
+}
+#dreamy-gift-surprise .gift-open-button:focus-visible,
+#dreamy-gift-surprise .gift-box:focus-visible {
+  outline: 3px solid #fff0a8;
+  outline-offset: 6px;
+}
+#dreamy-gift-surprise .gift-message {
+  max-width: 500px;
+  margin: 8px auto 0;
+  padding: 23px 20px;
+  border: 1px solid #f2c8ff88;
+  border-radius: 20px;
+  background: #ffffff0e;
+  box-shadow: 0 0 30px #c98aff20;
+  line-height: 1.9;
+  animation: dreamyGiftAppear .9s ease both;
+}
+#dreamy-gift-surprise .gift-message h3 {
+  color: #ffe4fa;
+  font-size: 24px;
+  margin-top: 0;
+}
+#dreamy-gift-surprise .gift-message[hidden] {
+  display: none;
+}
+#dreamy-gift-surprise.is-open .gift-lid {
+  transform: translate(-8px, -45px) rotate(-27deg);
+}
+#dreamy-gift-surprise.is-open .gift-bow {
+  transform: translate(-8px, -45px) rotate(-27deg);
+  opacity: 0;
+}
+#dreamy-gift-surprise.is-open .gift-box {
+  animation: none;
+}
+@keyframes dreamyGiftFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes dreamyGiftStars {
+  from { background-position: 4px 9px, 31px 41px; }
+  to { background-position: 4px -110px, 31px -150px; }
+}
+@keyframes dreamyGiftTwinkle {
+  from { opacity: .35; transform: scale(.8) rotate(-12deg); }
+  to { opacity: 1; transform: scale(1.2) rotate(12deg); }
+}
+@keyframes dreamyGiftAppear {
+  from { opacity: 0; transform: translateY(15px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #dreamy-gift-surprise *,
+  #dreamy-gift-surprise *:before,
+  #dreamy-gift-surprise *:after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+
+<style id="naveen-love-quiz-styles">
+#naveen-love-quiz {
+  --quiz-pink: #d95791;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 58px 17px;
+  color: #713c59;
+  text-align: center;
+  background: linear-gradient(145deg, #fff0f6, #fff8fc 48%, #fceafa);
+  font-family: inherit;
+}
+#naveen-love-quiz * { box-sizing: border-box; }
+#naveen-love-quiz .quiz-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+#naveen-love-quiz .quiz-heart {
+  position: absolute;
+  bottom: -35px;
+  color: #ec9fc4;
+  opacity: .45;
+  animation: naveenQuizFloat 9s linear infinite;
+}
+#naveen-love-quiz .quiz-heart:nth-child(1) { left: 8%; font-size: 21px; animation-delay: 0s; }
+#naveen-love-quiz .quiz-heart:nth-child(2) { left: 24%; font-size: 15px; animation-delay: 2s; }
+#naveen-love-quiz .quiz-heart:nth-child(3) { left: 78%; font-size: 24px; animation-delay: 1s; }
+#naveen-love-quiz .quiz-heart:nth-child(4) { left: 91%; font-size: 17px; animation-delay: 4s; }
+#naveen-love-quiz .quiz-heart:nth-child(5) { left: 56%; font-size: 14px; animation-delay: 3s; }
+#naveen-love-quiz .quiz-wrap { position: relative; max-width: 660px; margin: auto; }
+#naveen-love-quiz .quiz-kicker {
+  margin: 0 0 9px;
+  color: #bd5686;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#naveen-love-quiz .quiz-title {
+  margin: 0 0 12px;
+  color: #a83f75;
+  font-size: clamp(27px, 5vw, 39px);
+  text-shadow: 0 2px 12px #f5c2dc;
+}
+#naveen-love-quiz .quiz-intro { line-height: 1.8; margin: 0 auto 24px; }
+#naveen-love-quiz .quiz-card {
+  padding: clamp(19px, 4vw, 30px);
+  border: 1px solid #f1c6dc;
+  border-radius: 24px;
+  background: #ffffffd9;
+  box-shadow: 0 12px 35px #c76b9620;
+  text-align: left;
+}
+#naveen-love-quiz .quiz-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 11px;
+  color: #a45a7b;
+  font-size: 13px;
+  font-weight: 700;
+}
+#naveen-love-quiz .quiz-progress {
+  height: 7px;
+  border-radius: 20px;
+  background: #f8e2ed;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+#naveen-love-quiz .quiz-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ed9fc3, #bd64a0);
+  transition: width .35s ease;
+}
+#naveen-love-quiz .quiz-question {
+  margin: 0 0 18px;
+  color: #743d5a;
+  font-size: clamp(19px, 4vw, 24px);
+  line-height: 1.5;
+}
+#naveen-love-quiz .quiz-options { display: grid; gap: 10px; }
+#naveen-love-quiz .quiz-option {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #efd0e0;
+  border-radius: 14px;
+  background: #fff9fc;
+  color: #75425c;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+#naveen-love-quiz .quiz-option:hover {
+  transform: translateY(-2px);
+  background: #fff0f7;
+  border-color: #df91b6;
+}
+#naveen-love-quiz .quiz-option:focus-visible,
+#naveen-love-quiz .quiz-next:focus-visible,
+#naveen-love-quiz .quiz-restart:focus-visible {
+  outline: 3px solid #c55c91;
+  outline-offset: 3px;
+}
+#naveen-love-quiz .quiz-option:disabled { cursor: default; opacity: .95; }
+#naveen-love-quiz .quiz-option.quiz-correct {
+  background: #f0fbf1;
+  border-color: #83c99a;
+}
+#naveen-love-quiz .quiz-option.quiz-wrong {
+  background: #fff0f4;
+  border-color: #eaa0b7;
+}
+#naveen-love-quiz .quiz-feedback {
+  min-height: 27px;
+  margin: 15px 0 0;
+  color: #a34778;
+  font-weight: 700;
+  line-height: 1.6;
+}
+#naveen-love-quiz .quiz-next,
+#naveen-love-quiz .quiz-restart {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(110deg, #df79a9, #c16cb4);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px #d76a9b30;
+  transition: transform .2s ease;
+}
+#naveen-love-quiz .quiz-next:hover,
+#naveen-love-quiz .quiz-restart:hover { transform: translateY(-2px); }
+#naveen-love-quiz .quiz-next[hidden],
+#naveen-love-quiz .quiz-result[hidden] { display: none; }
+#naveen-love-quiz .quiz-result {
+  text-align: center;
+  padding: 8px 2px 4px;
+  animation: naveenQuizAppear .6s ease both;
+}
+#naveen-love-quiz .quiz-result-heart {
+  font-size: 52px;
+  margin: 5px 0 12px;
+  animation: naveenQuizPulse 1.5s ease-in-out infinite;
+}
+#naveen-love-quiz .quiz-result h3 {
+  color: #a83f75;
+  font-size: clamp(23px, 4vw, 31px);
+  margin: 0 0 12px;
+}
+#naveen-love-quiz .quiz-result p { line-height: 1.9; }
+#naveen-love-quiz .quiz-score {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: #fde5f0;
+  color: #a13f72;
+  font-weight: 700;
+}
+#naveen-love-quiz .quiz-signoff { color: #bb5588; font-weight: 700; }
+@keyframes naveenQuizFloat {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .5; }
+  85% { opacity: .45; }
+  100% { transform: translateY(-600px) rotate(25deg); opacity: 0; }
+}
+@keyframes naveenQuizAppear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes naveenQuizPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #naveen-love-quiz *,
+  #naveen-love-quiz *::before,
+  #naveen-love-quiz *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+
+<style id="heart-hunt-styles">
+#heart-call-surprise, #relationship-treasure-hunt {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 54px 18px;
+  color: #70415b;
+  text-align: center;
+  font-family: inherit;
+  background: linear-gradient(145deg,#fff0f7,#fffafd 55%,#fce8f5);
+}
+#heart-call-surprise *, #relationship-treasure-hunt * { box-sizing: border-box; }
+#heart-call-surprise .hh-wrap, #relationship-treasure-hunt .hh-wrap {
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto;
+}
+#heart-call-surprise .hh-kicker, #relationship-treasure-hunt .hh-kicker {
+  margin: 0 0 9px;
+  color: #bb5488;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 800;
+}
+#heart-call-surprise .hh-title, #relationship-treasure-hunt .hh-title {
+  margin: 0 0 13px;
+  color: #a83e76;
+  font-size: clamp(27px,5vw,39px);
+  line-height: 1.25;
+  text-shadow: 0 3px 16px #eeb6d4;
+}
+#heart-call-surprise .hh-intro, #relationship-treasure-hunt .hh-intro {
+  max-width: 570px;
+  margin: 0 auto 24px;
+  line-height: 1.8;
+}
+#heart-call-surprise .hh-card, #relationship-treasure-hunt .hh-card {
+  padding: clamp(19px,4vw,30px);
+  border: 1px solid #f0c7dc;
+  border-radius: 25px;
+  background: #ffffffdf;
+  box-shadow: 0 14px 38px #b84d7b18;
+}
+#heart-call-surprise .hh-primary, #heart-call-surprise .hh-secondary,
+#relationship-treasure-hunt .hh-primary,
+#relationship-treasure-hunt .hh-secondary {
+  display: inline-block;
+  margin: 9px 5px 0;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(110deg,#df79a9,#bd67b2);
+  color: white;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 6px 16px #d76a9b26;
+  transition: transform .2s ease;
+}
+#heart-call-surprise .hh-primary:hover, #heart-call-surprise .hh-secondary:hover,
+#relationship-treasure-hunt .hh-primary:hover,
+#relationship-treasure-hunt .hh-secondary:hover { transform: translateY(-2px); }
+#heart-call-surprise button:focus-visible, #relationship-treasure-hunt button:focus-visible {
+  outline: 3px solid #b84d83;
+  outline-offset: 3px;
+}
+#heart-call-surprise .hh-call-screen { max-width: 390px; margin: auto; }
+#heart-call-surprise .hh-call-orb {
+  display: grid;
+  place-items: center;
+  width: 116px;
+  height: 116px;
+  margin: 12px auto 20px;
+  border-radius: 50%;
+  color: white;
+  font-size: 48px;
+  background: radial-gradient(circle at 30% 25%,#ffd7e9,#db79b0 65%,#a94d92);
+  box-shadow: 0 0 0 12px #fce4f0, 0 0 42px #e7a1c8;
+  animation: hhPulse 1.8s ease-in-out infinite;
+}
+#heart-call-surprise .hh-call-name { margin: 0 0 7px; color:#a43d75; font-size:25px; font-weight:800; }
+#heart-call-surprise .hh-call-sub { margin:0; color:#a56784; }
+#heart-call-surprise .hh-call-actions { margin-top:27px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+#heart-call-surprise .hh-answer {
+  width:62px; height:62px; border:0; border-radius:50%; cursor:pointer;
+  color:white; font-size:25px; background:#52b879;
+  box-shadow:0 5px 16px #52b87955; animation:hhAnswer 1.3s ease-in-out infinite;
+}
+#heart-call-surprise .hh-decline {
+  width:62px; height:62px; border:0; border-radius:50%; cursor:pointer;
+  color:white; font-size:25px; background:#e77c91;
+}
+#heart-call-surprise .hh-action-label { display:block; margin-top:7px; font-size:12px; color:#9b6781; }
+#heart-call-surprise .hh-typed-message {
+  min-height:100px; margin:20px 0 0; line-height:1.95; white-space:pre-wrap;
+  text-align:left; color:#77435f; overflow-wrap:anywhere;
+}
+#heart-call-surprise .hh-caret { display:inline-block; color:#c44d8b; animation:hhBlink .8s steps(2,start) infinite; }
+#heart-call-surprise .hh-hidden, #relationship-treasure-hunt .hh-hidden { display:none !important; }
+#relationship-treasure-hunt .hh-progress-row {
+  display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  margin-bottom:12px; color:#a45a7b; font-size:13px; font-weight:750;
+}
+#relationship-treasure-hunt .hh-progress {
+  height:7px; margin-bottom:23px; border-radius:20px; overflow:hidden; background:#f7e1ec;
+}
+#relationship-treasure-hunt .hh-progress-fill {
+  height:100%; width:0; border-radius:inherit;
+  background:linear-gradient(90deg,#ef9dc4,#bd64a0); transition:width .35s ease;
+}
+#relationship-treasure-hunt .hh-clue-icon { font-size:43px; margin:0 0 8px; }
+#relationship-treasure-hunt .hh-question {
+  margin:0 0 17px; color:#78425e; font-size:clamp(19px,4vw,24px); line-height:1.55;
+}
+#relationship-treasure-hunt .hh-options { display:grid; gap:10px; }
+#relationship-treasure-hunt .hh-option {
+  width:100%; padding:13px 15px; border:1px solid #efd0e0; border-radius:14px;
+  background:#fff9fc; color:#75425c; text-align:left; font:inherit; cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+#relationship-treasure-hunt .hh-option:hover { transform:translateY(-1px); background:#fff0f7; border-color:#df91b6; }
+#relationship-treasure-hunt .hh-option:disabled { cursor:default; }
+#relationship-treasure-hunt .hh-option.hh-right { background:#f0fbf1; border-color:#83c99a; }
+#relationship-treasure-hunt .hh-option.hh-wrong { background:#fff0f4; border-color:#eaa0b7; }
+#relationship-treasure-hunt .hh-feedback { min-height:27px; margin:15px 0 0; color:#a34778; font-weight:700; line-height:1.65; }
+#relationship-treasure-hunt .hh-finale { line-height:1.95; animation:hhAppear .6s ease both; }
+#relationship-treasure-hunt .hh-finale-heart { font-size:55px; animation:hhPulse 1.5s ease-in-out infinite; }
+#relationship-treasure-hunt .hh-finale h3 { color:#a83f75; font-size:clamp(23px,4vw,31px); }
+#heart-call-surprise .hh-note, #relationship-treasure-hunt .hh-note { color:#a55c7c; font-size:13px; line-height:1.7; }
+@keyframes hhPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.07)} }
+@keyframes hhAnswer { 0%,100%{box-shadow:0 5px 16px #52b87955} 50%{box-shadow:0 5px 25px #52b87988} }
+@keyframes hhBlink { to { visibility:hidden } }
+@keyframes hhAppear { from {opacity:0;transform:translateY(12px)} to {opacity:1;transform:translateY(0)} }
+@media(max-width:480px) {
+  #heart-call-surprise, #relationship-treasure-hunt { padding:40px 13px; }
+  #heart-call-surprise .hh-card, #relationship-treasure-hunt .hh-card { padding:18px 14px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #heart-call-surprise *, #relationship-treasure-hunt * {
+    animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;
+  }
+}
+</style>
+
+</head>
+<body>
+    <section class="hero">
+        <div class="heart">❤️</div>
+        <h1>Happy Birthday, Naveen!</h1>
+        <h2>My love, my favourite person, my forever. 💕</h2>
+
+        <p>
+            Today is a celebration of you and all the happiness
+            you bring into my life. You make ordinary moments special.
+        </p>
+
+        <button onclick="showLetter()">Open Your Surprise 💌</button>
+
+        <section class="letter" id="letter">
+            <h2>My Dearest Naveen ❤️</h2>
+            <p>
+                If I could give you one gift, I would let you see yourself
+                through my eyes. Then you would understand how precious
+                and special you are to me.
+            </p>
+            <p>
+                I wish you happiness, success, laughter, and endless love.
+                I hope I get to celebrate many more birthdays by your side.
+            </p>
+            <h2>Forever yours. 💖</h2>
+        </section>
+
+        <p>Made with endless love, just for you. 🎂</p>
+    </section>
+
+    
+<section class="gallery">
+    <h2>Our Little World 📸</h2>
+    <p>Every memory with you is a favourite memory.</p>
+
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo1.jpg.jpeg') }}"
+                 alt="Our favourite memory">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo2.jpg.jpeg') }}"
+                 alt="A moment to remember">
+        </div>
+
+        <div class="photo-card">
+            <img class="gallery-photo"
+                 src="{{ url_for('static', filename='photos/Photo3.jpg.jpeg') }}"
+                 alt="Our special memory">
+        </div>
+    </div>
+</section>
+
+    
+<section id="quality-section" class="quality-section">
+  <h2>Five Reasons My Heart Chooses You ??</h2>
+  <p>Tap each little card to discover what I love about you.</p>
+  <div class="quality-cards">
+    <button class="quality-card" onclick="showQuality(0)">&#10084; My Gentleman</button>
+    <button class="quality-card" onclick="showQuality(1)">&#128153; My Caring &amp; Protective One</button>
+    <button class="quality-card" onclick="showQuality(2)">&#10024; My Calm &amp; Sweet Soul</button>
+    <button class="quality-card" onclick="showQuality(3)">&#127775; My Understanding One</button>
+    <button class="quality-card" onclick="showQuality(4)">&#128150; My Handsome Boy</button>
+  </div>
+  <div id="quality-popup" class="quality-popup" hidden>
+    <button onclick="closeQuality()" class="popup-close">?</button>
+    <h3 id="quality-title"></h3>
+    <p id="quality-message"></p>
+    <button onclick="nextQuality()" class="popup-next">Next surprise ??</button>
+  </div>
+</section>
+<style>
+.quality-section{text-align:center;padding:40px 16px}
+.quality-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:24px auto}
+.quality-card{padding:20px;border:1px solid #f0a8bd;border-radius:16px;background:#fff0f5;color:#7b2948;font-size:17px;cursor:pointer}
+.quality-popup{position:relative;max-width:460px;margin:20px auto;padding:28px;background:#fff0f5;border:1px solid #efa4bd;border-radius:18px;color:#7b2948}
+.quality-popup[hidden]{display:none}
+.popup-close{position:absolute;right:12px;top:10px;border:0;background:transparent;cursor:pointer;font-size:20px}
+.popup-next{padding:10px 18px;border:0;border-radius:20px;background:#d94f7b;color:white;cursor:pointer}
+</style>
+<script>
+const qualityItems = [
+ ["A True Gentleman ??","Your respect, manners, and the way you treat me make me admire you more every day."],
+ ["Caring & Protective ???","You make me feel cared for and safe. Your little acts of concern mean the world to me."],
+ ["Calm & Sweet ??","Your calm nature and sweetness bring peace to my heart, even on difficult days."],
+ ["Understanding ??","You try to understand my feelings, and that makes me feel loved for who I truly am."],
+ ["My Good-Looking Boy ??","That handsome face of yours still makes my heart skip a beat. You are my favourite view."]
+];
+let qualityIndex = 0;
+function showQuality(i) {
+  qualityIndex = i;
+  document.getElementById("quality-title").textContent = qualityItems[i][0];
+  document.getElementById("quality-message").textContent = qualityItems[i][1];
+  document.getElementById("quality-popup").hidden = false;
+}
+function closeQuality() {
+  document.getElementById("quality-popup").hidden = true;
+}
+function nextQuality() {
+  showQuality((qualityIndex + 1) % qualityItems.length);
+}
+</script>
+
+
+<section id="birthday-surprises" class="surprise-world">
+  <div class="surprise-heading">
+    <span class="pastel-kicker">A LITTLE WORLD MADE FOR YOU</span>
+    <h2>Our Little World of Love 🩷</h2>
+    <p>Five tiny surprises for my favourite person. Explore them one by one!</p>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">💌</div>
+    <h3>1. A Secret Letter</h3>
+    <p>A little message from my heart, just for you.</p>
+    <button class="pastel-btn" onclick="revealSecretLetter()">Open your envelope 💌</button>
+    <div id="secret-letter" class="secret-letter" hidden>
+      <div class="letter-heart">💗</div>
+      <h4>To my favourite person, Naveen</h4>
+      <p>My love, you make ordinary moments feel special just by being in them. Your kindness, your care, your calm nature and that lovely smile of yours mean more to me than words can explain.</p>
+      <p>I hope you always feel as loved, appreciated and special as you make me feel. On your birthday and every day after it, I wish you happiness, peace, success and all the beautiful things your heart deserves.</p>
+      <p class="letter-signoff">With all my love, always. 🩷</p>
+    </div>
+  </div>
+
+  <div class="surprise-panel">
+    <div class="surprise-icon">📸</div>
+    <h3>2. Our Little Love Story</h3>
+    <p>Some stories are made of little things that become everything.</p>
+    <div class="memory-timeline">
+      <div class="memory-stop"><span>🌷</span><div><h4>The Beginning</h4><p>Every beautiful story has a beginning. Ours has a special place in my heart.</p></div></div>
+      <div class="memory-stop"><span>🧸</span><div><h4>The Little Things</h4><p>The conversations, the smiles and the little moments I wish I could keep forever.</p></div></div>
+      <div class="memory-stop"><span>💞</span><div><h4>My Favourite Person</h4><p>Somehow, you became the person who makes my days brighter.</p></div></div>
+      <div class="memory-stop"><span>✨</span><div><h4>More Memories Ahead</h4><p>This is just one chapter. I look forward to all the beautiful memories still waiting for us.</p></div></div>
+    </div>
+    <p class="small-note">These are sweet starter messages; we can personalise them with your real memories later.</p>
+  </div>
+
+  <div class="surprise-panel heart-panel">
+    <div class="surprise-icon">💗</div>
+    <h3>3. Tap My Heart</h3>
+    <p>Every tap holds one little reason why you are so special to me.</p>
+    <button class="big-heart" onclick="tapMyHeart()" aria-label="Tap for a love message">💗</button>
+    <p id="heart-message" class="heart-message">Tap the heart, my love!</p>
+    <p id="heart-counter" class="small-note">Your little love notes: 0</p>
+  </div>
+
+  <div class="surprise-panel birthday-panel">
+    <div class="surprise-icon">🎂</div>
+    <h3>4. One Last Birthday Surprise</h3>
+    <p>Ready for a little birthday magic, birthday boy?</p>
+    <button class="pastel-btn" onclick="revealBirthday()">Make a wish, Naveen! 🎉</button>
+    <div id="birthday-reveal" class="birthday-reveal" hidden>
+      <div class="birthday-cake">🎂</div>
+      <h4>Happy Birthday, My Love! 🩷</h4>
+      <p>May your days be full of laughter, your dreams come true, and your heart always find reasons to smile.</p>
+      <p>And if I could make one wish too, it would be for you to feel loved today, tomorrow, and through every chapter ahead. 💗</p>
+      <div id="confetti-area" aria-hidden="true"></div>
+    </div>
+  </div>
+<p class="surprise-footer">Made with all my love, just for you, Naveen 🩷</p>
+</section>
+
+<style>
+.surprise-world{box-sizing:border-box;padding:48px 16px;background:linear-gradient(180deg,#fff5fa,#fff9f0,#fdf3ff);color:#75445f;text-align:center;font-family:inherit}
+.surprise-world *{box-sizing:border-box}
+.surprise-heading{max-width:680px;margin:0 auto 28px}
+.surprise-heading h2{font-size:clamp(26px,5vw,38px);color:#bd608c;margin:10px 0}
+.surprise-heading p{line-height:1.7}
+.pastel-kicker{font-size:12px;letter-spacing:2px;color:#b56e97;font-weight:bold}
+.surprise-panel{max-width:650px;margin:22px auto;padding:26px 20px;border:1px solid #f3d2e3;border-radius:24px;background:rgba(255,255,255,.88);box-shadow:0 8px 25px #e9c5d52b;overflow:hidden}
+.surprise-icon{font-size:35px}
+.surprise-panel h3{color:#bd608c;font-size:23px;margin:10px 0}
+.surprise-panel p{line-height:1.7}
+.pastel-btn{display:inline-block;margin:10px 0;padding:12px 20px;border:0;border-radius:24px;background:#f4c9dd;color:#75445f;font-size:15px;font-weight:bold;cursor:pointer}
+.pastel-btn:hover{background:#edb2cf}
+.secret-letter,.birthday-reveal{margin:20px auto 0;padding:22px;max-width:500px;border-radius:18px;background:#fff5f8;border:1px dashed #e8a9c8;text-align:left}
+.secret-letter h4,.birthday-reveal h4{color:#bd608c;text-align:center;font-size:21px}
+.letter-heart,.birthday-cake{font-size:40px;text-align:center}
+.letter-signoff{font-weight:bold;text-align:center;color:#bd608c}
+.memory-timeline{max-width:480px;margin:24px auto 8px;text-align:left}
+.memory-stop{display:flex;gap:14px;padding:0 0 22px;position:relative}
+.memory-stop>span{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#fff0f6;font-size:22px}
+.memory-stop h4{margin:3px 0;color:#bd608c}
+.memory-stop p{margin:5px 0}
+.small-note{font-size:13px;opacity:.8}
+.big-heart{display:block;margin:20px auto;border:0;background:transparent;font-size:70px;cursor:pointer;animation:softBeat 1.2s infinite}
+.big-heart:active{transform:scale(.88)}
+@keyframes softBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.heart-message{min-height:54px;font-weight:bold;color:#bd608c;font-size:19px}
+.birthday-reveal{text-align:center;position:relative}
+#confetti-area{position:relative;height:55px;overflow:hidden}
+.love-confetti{position:absolute;top:0;font-size:22px;animation:fallingLove 2s ease-in forwards}
+@keyframes fallingLove{from{transform:translateY(-5px) rotate(0);opacity:1}to{transform:translateY(60px) rotate(180deg);opacity:0}}
+
+
+.surprise-footer{font-weight:bold;color:#bd608c;margin:32px 0 0}
+@media(max-width:480px){.surprise-panel{padding:22px 15px}.surprise-world{padding:35px 12px}}
+</style>
+
+<script>
+(function(){
+  const letter = document.getElementById("secret-letter");
+  const birthday = document.getElementById("birthday-reveal");
+  const heartMessages = [
+    "You make my heart feel at home. 🏡💗",
+    "Your smile is one of my favourite things. 😊",
+    "I admire the gentleman you are. 🤵",
+    "Thank you for caring for me in your own sweet way. 🧸",
+    "You make ordinary days feel special. ✨",
+    "If I could choose again, I would still choose you. 💞",
+    "You are handsome, inside and out. 😍",
+    "My favourite place is wherever we can share a smile. 🌷",
+    "I am cheering for you in every dream you chase. 🌟",
+    "You are loved more than this little website can say. 🩷"
+  ];
+  let heartCount = 0;
+  let lastHeartIndex = -1;
+
+  window.revealSecretLetter = function(){
+    letter.hidden = !letter.hidden;
+    if(!letter.hidden) letter.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+  window.tapMyHeart = function(){
+    let index = Math.floor(Math.random()*heartMessages.length);
+    if(heartMessages.length > 1 && index === lastHeartIndex) index = (index+1)%heartMessages.length;
+    lastHeartIndex = index;
+    heartCount++;
+    document.getElementById("heart-message").textContent = heartMessages[index];
+    document.getElementById("heart-counter").textContent = "Your little love notes: " + heartCount;
+  };
+
+  window.revealBirthday = function(){
+    birthday.hidden = false;
+    const area = document.getElementById("confetti-area");
+    area.replaceChildren();
+    const symbols = ["💗","💕","✨","🌸","🎉","💖"];
+    for(let i=0;i<24;i++){
+      const piece = document.createElement("span");
+      piece.className = "love-confetti";
+      piece.textContent = symbols[i%symbols.length];
+      piece.style.left = (3 + Math.random()*92) + "%";
+      piece.style.animationDelay = (Math.random()*0.8) + "s";
+      area.appendChild(piece);
+    }
+    birthday.scrollIntoView({behavior:"smooth",block:"nearest"});
+  };
+
+})();
+</script>
+
+
+<!-- Jaan Ban Gaye local audio player -->
+<div id="jaan-music-dock">
+  <div class="jaan-music-title">A little song for you, Naveen</div>
+  <audio id="jaan-local-audio" preload="metadata">
+    <source src="{{ url_for('static', filename='music/jaan_ban_gaye.mp3') }}" type="audio/mpeg">
+  </audio>
+  <div class="jaan-music-controls">
+    <button id="jaan-start-btn" onclick="startJaanMusic()">Start the Surprise</button>
+    <button id="jaan-toggle-btn" onclick="toggleJaanMusic()" disabled>Play</button>
+  </div>
+  <p id="jaan-music-status">Click Start the Surprise to play our song.</p>
+</div>
+
+<style>
+#jaan-music-dock{position:fixed;right:14px;bottom:14px;z-index:99999;width:300px;max-width:calc(100vw - 28px);padding:13px;background:#fff5fa;color:#75445f;border:1px solid #efc4d9;border-radius:22px;box-shadow:0 5px 25px #9d628633;text-align:center;font-family:Arial,sans-serif}
+.jaan-music-title{font-size:14px;font-weight:bold;margin-bottom:8px}
+.jaan-music-controls{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.jaan-music-controls button{position:relative;z-index:2;border:0;border-radius:22px;padding:11px 13px;background:#f2c6dc;color:#75445f;cursor:pointer;font-weight:bold}
+.jaan-music-controls button:disabled{opacity:.55;cursor:default}
+#jaan-music-status{font-size:12px;line-height:1.4;margin:8px 0 0}
+@media(max-width:480px){ #jaan-music-dock{right:8px;bottom:8px;width:255px}}
+</style>
+
+<script>
+(function(){
+  const audio = document.getElementById("jaan-local-audio");
+  const start = document.getElementById("jaan-start-btn");
+  const toggle = document.getElementById("jaan-toggle-btn");
+  const status = document.getElementById("jaan-music-status");
+  let started = false;
+
+  async function playSong(skipIntro) {
+    try {
+      if (audio.readyState < 1) {
+        status.textContent = "Loading our song...";
+        await new Promise((resolve, reject) => {
+          audio.addEventListener("loadedmetadata", resolve, {once:true});
+          audio.addEventListener("error", reject, {once:true});
+          audio.load();
+        });
+      }
+
+      if (skipIntro && !started && Number.isFinite(audio.duration) && audio.duration > 31) {
+        audio.currentTime = 30;
+      }
+
+      await audio.play();
+      started = true;
+      toggle.disabled = false;
+      toggle.textContent = "Pause";
+      start.textContent = "Start the Surprise";
+      status.textContent = "Enjoy our song, Naveen!";
+    } catch (error) {
+      status.textContent = "Couldn't play the song. Check that the MP3 file is present and try again.";
+      console.error("Jaan Ban Gaye playback error:", error);
+    }
+  }
+
+  window.startJaanMusic = function() {
+    playSong(true);
+  };
+
+  window.toggleJaanMusic = function() {
+    if (audio.paused) {
+      playSong(false);
+    } else {
+      audio.pause();
+      toggle.textContent = "Play";
+      status.textContent = "Song paused. Resume whenever you like.";
+    }
+  };
+
+  audio.addEventListener("ended", function() {
+    toggle.textContent = "Play";
+    status.textContent = "Our song has finished.";
+  });
+
+  audio.addEventListener("error", function() {
+    status.textContent = "Audio file couldn't load. Please check the MP3 path.";
+  });
+})();
+</script>
+
+<footer>
+        Made with love, just for you, Naveen. ❤️🎂
+    </footer>
+
+    <script>
+        function showLetter() {
+            const letter = document.getElementById("letter");
+            letter.classList.toggle("show");
+
+            if (letter.classList.contains("show")) {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        }
+    </script>
+
+<!-- Dreamy animated birthday gift for Naveen -->
+<section id="dreamy-gift-surprise" aria-labelledby="dreamy-gift-heading">
+  <div class="gift-stars" aria-hidden="true"></div>
+  <div class="gift-content">
+    <p aria-hidden="true" style="font-size:28px;margin:0 0 12px">✦ ✧ ✦</p>
+    <h2 id="dreamy-gift-heading">One Last Little Surprise ✨</h2>
+    <p class="gift-intro">
+      Naveen, there is one more little gift waiting just for you.<br>
+      Make a wish, then open your present. 🎁
+    </p>
+
+    <div class="gift-stage">
+      <span class="gift-sparkle sparkle-one" aria-hidden="true">✧</span>
+      <span class="gift-sparkle sparkle-two" aria-hidden="true">✦</span>
+      <span class="gift-sparkle sparkle-three" aria-hidden="true">✧</span>
+      <button type="button" class="gift-box" id="dreamy-gift-box"
+              aria-label="Open the birthday gift" aria-expanded="false"
+              aria-controls="dreamy-gift-message">
+        <span class="gift-base" aria-hidden="true"></span>
+        <span class="gift-ribbon" aria-hidden="true"></span>
+        <span class="gift-lid" aria-hidden="true"></span>
+        <span class="gift-bow" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <button type="button" class="gift-open-button" id="dreamy-gift-open">
+      Open Your Gift ✨
+    </button>
+
+    <div class="gift-message" id="dreamy-gift-message" hidden>
+      <h3>To My Favourite Person, Naveen 💗</h3>
+      <p>
+        If I could wrap up every reason you make me smile,
+        every moment you make me feel cared for, and every little
+        thing I adore about you, this gift still wouldn't be big enough.
+      </p>
+      <p>
+        My wish for you is a life full of happiness, peace, beautiful
+        dreams, and all the love your heart deserves.
+      </p>
+      <p>
+        Thank you for being you. You are a gift in my life, too. 🌙
+      </p>
+      <p style="font-size:22px;margin-bottom:0">Happy Birthday, my special one! 💖</p>
+    </div>
+  </div>
+</section>
+
+<script id="dreamy-gift-script">
+(function () {
+  const section = document.getElementById("dreamy-gift-surprise");
+  if (!section) return;
+
+  const box = document.getElementById("dreamy-gift-box");
+  const openButton = document.getElementById("dreamy-gift-open");
+  const message = document.getElementById("dreamy-gift-message");
+
+  function openGift() {
+    if (section.classList.contains("is-open")) return;
+    section.classList.add("is-open");
+    box.setAttribute("aria-expanded", "true");
+    message.hidden = false;
+    openButton.textContent = "Your Surprise Is Opened 💖";
+    openButton.disabled = true;
+  }
+
+  box.addEventListener("click", openGift);
+  openButton.addEventListener("click", openGift);
+})();
+</script>
+
+
+<!-- Romantic relationship mini-quiz -->
+<section id="naveen-love-quiz" aria-labelledby="naveen-quiz-heading">
+  <div class="quiz-hearts" aria-hidden="true">
+    <span class="quiz-heart">♡</span><span class="quiz-heart">♥</span>
+    <span class="quiz-heart">♡</span><span class="quiz-heart">♥</span>
+    <span class="quiz-heart">♡</span>
+  </div>
+  <div class="quiz-wrap">
+    <p class="quiz-kicker">A little game made with love</p>
+    <h2 class="quiz-title" id="naveen-quiz-heading">How Well Do You Know Our Love? 💞</h2>
+    <p class="quiz-intro">
+      Naveen, let's see how well you know the little things that make
+      this birthday page special. Choose your answers and unlock your message! 💗
+    </p>
+
+    <div class="quiz-card">
+      <div id="naveen-quiz-game">
+        <div class="quiz-progress-row">
+          <span id="naveen-quiz-count">Question 1 of 4</span>
+          <span id="naveen-quiz-score-label">Hearts collected: 0 💗</span>
+        </div>
+        <div class="quiz-progress" aria-hidden="true">
+          <div class="quiz-progress-fill" id="naveen-quiz-progress"></div>
+        </div>
+        <h3 class="quiz-question" id="naveen-quiz-question"></h3>
+        <div class="quiz-options" id="naveen-quiz-options"></div>
+        <p class="quiz-feedback" id="naveen-quiz-feedback" aria-live="polite"></p>
+        <button class="quiz-next" id="naveen-quiz-next" type="button" hidden>Next question →</button>
+      </div>
+
+      <div class="quiz-result" id="naveen-quiz-result" hidden aria-live="polite">
+        <div class="quiz-result-heart" aria-hidden="true">💗</div>
+        <h3 id="naveen-quiz-result-title">A little message for you</h3>
+        <div class="quiz-score" id="naveen-quiz-final-score"></div>
+        <p>
+          No quiz could ever measure how special you are to me.
+          Every little thing about you makes this story ours,
+          and I would choose to celebrate you over and over again.
+        </p>
+        <p>
+          I hope this new year of your life brings you endless smiles,
+          peaceful days, beautiful dreams, and all the love you deserve.
+        </p>
+        <p class="quiz-signoff">Happy Birthday, Naveen. You mean so much to me. 🌷</p>
+        <button class="quiz-restart" id="naveen-quiz-restart" type="button">Play Again 💕</button>
+      </div>
+    </div>
+    <p style="margin:20px 0 0;font-size:13px;color:#a55c7c">Made with a little pink, a lot of love, and all my heart. ✨</p>
+  </div>
+</section>
+
+<script id="naveen-love-quiz-script">
+(function () {
+  const root = document.getElementById("naveen-love-quiz");
+  if (!root || root.dataset.initialized === "true") return;
+  root.dataset.initialized = "true";
+
+  const questions = [
+    {
+      question: "When was our first appearance together? 🥹💕",
+      options: ["26 January 2026", "14 February 2026", "8 February 2026"],
+      answer: 0,
+      note: "26 January 2026 — a date that became part of our story. 💗"
+    },
+    {
+      question: "When did we meet for the very first time? 🌷",
+      options: ["17 March 2026", "8 February 2026", "26 April 2026"],
+      answer: 1,
+      note: "8 February 2026 — the day of our first meeting. 🩷"
+    },
+    {
+      question: "Do you remember the date of our first date? 🫶",
+      options: ["26 April 2026", "26 January 2026", "17 March 2026"],
+      answer: 0,
+      note: "26 April 2026 — our first date, a memory to keep close. 💞"
+    },
+    {
+      question: "When did we have our very first call? ☎️💗",
+      options: ["8 February 2026", "17 March 2026", "26 April 2026"],
+      answer: 1,
+      note: "17 March 2026 — the date of our first call. 💌"
+    }
+  ];
+
+  const game = document.getElementById("naveen-quiz-game");
+  const count = document.getElementById("naveen-quiz-count");
+  const scoreLabel = document.getElementById("naveen-quiz-score-label");
+  const progress = document.getElementById("naveen-quiz-progress");
+  const questionTitle = document.getElementById("naveen-quiz-question");
+  const optionsBox = document.getElementById("naveen-quiz-options");
+  const feedback = document.getElementById("naveen-quiz-feedback");
+  const nextButton = document.getElementById("naveen-quiz-next");
+  const result = document.getElementById("naveen-quiz-result");
+  const resultTitle = document.getElementById("naveen-quiz-result-title");
+  const finalScore = document.getElementById("naveen-quiz-final-score");
+  const restart = document.getElementById("naveen-quiz-restart");
+
+  let index = 0;
+  let score = 0;
+  let answered = false;
+
+  function renderQuestion() {
+    answered = false;
+    const item = questions[index];
+    count.textContent = "Question " + (index + 1) + " of " + questions.length;
+    scoreLabel.textContent = "Hearts collected: " + score + " 💗";
+    progress.style.width = ((index / questions.length) * 100) + "%";
+    questionTitle.textContent = item.question;
+    feedback.textContent = "";
+    nextButton.hidden = true;
+    nextButton.textContent = index === questions.length - 1 ? "Reveal my message 💌" : "Next question →";
+    optionsBox.replaceChildren();
+
+    item.options.forEach(function (option, optionIndex) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "quiz-option";
+      button.textContent = option;
+      button.addEventListener("click", function () {
+        if (answered) return;
+        answered = true;
+        const correct = optionIndex === item.answer;
+        if (correct) score++;
+        Array.from(optionsBox.children).forEach(function (choice, i) {
+          choice.disabled = true;
+          if (i === item.answer) choice.classList.add("quiz-correct");
+          else if (i === optionIndex) choice.classList.add("quiz-wrong");
+        });
+        feedback.textContent = correct
+          ? "That's right! " + item.note
+          : "A little hint from me: " + item.note;
+        scoreLabel.textContent = "Hearts collected: " + score + " 💗";
+        progress.style.width = (((index + 1) / questions.length) * 100) + "%";
+        nextButton.hidden = false;
+      });
+      optionsBox.appendChild(button);
+    });
+  }
+
+  function showResult() {
+    game.hidden = true;
+    result.hidden = false;
+    progress.style.width = "100%";
+    finalScore.textContent = "You collected " + score + " out of " + questions.length + " hearts 💗";
+    resultTitle.textContent = score === questions.length
+      ? "You know this little love story! 💖"
+      : "Every answer leads back to love 💕";
+    result.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  nextButton.addEventListener("click", function () {
+    if (!answered) return;
+    if (index < questions.length - 1) {
+      index++;
+      renderQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  restart.addEventListener("click", function () {
+    index = 0;
+    score = 0;
+    result.hidden = true;
+    game.hidden = false;
+    renderQuestion();
+    root.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  renderQuestion();
+})();
+</script>
+
+
+
+<section id="heart-call-surprise" aria-labelledby="heart-call-heading">
+  <div class="hh-wrap">
+    <p class="hh-kicker">A little surprise, just for you</p>
+    <h2 class="hh-title" id="heart-call-heading">📞 A Call From My Heart</h2>
+    <p class="hh-intro">Naveen, someone has something special to tell you. Will you answer? 💗</p>
+    <div class="hh-card">
+      <div class="hh-call-screen" id="hh-call-screen">
+        <div class="hh-call-orb" aria-hidden="true">♥</div>
+        <p class="hh-call-name">Someone who loves you</p>
+        <p class="hh-call-sub" id="hh-call-status">Incoming heart call…</p>
+        <div class="hh-call-actions">
+          <div>
+            <button class="hh-answer" id="hh-answer-call" type="button" aria-label="Answer the heart call">♥</button>
+            <span class="hh-action-label">Answer</span>
+          </div>
+          <div>
+            <button class="hh-decline" id="hh-decline-call" type="button" aria-label="Decline the heart call">×</button>
+            <span class="hh-action-label">Not now</span>
+          </div>
+        </div>
+      </div>
+      <div id="hh-call-message" class="hh-hidden">
+        <p class="hh-call-name">A message from my heart 💌</p>
+        <p class="hh-typed-message"><span id="hh-typed-text"></span><span class="hh-caret" id="hh-typed-caret">|</span></p>
+        <button class="hh-primary" id="hh-call-again" type="button">Read it again 💗</button>
+      </div>
+    </div>
+    <p class="hh-note">No real call is being made — just a little pretend call made with love. ✨</p>
+  </div>
+</section>
+
+
+
+<section id="relationship-treasure-hunt" aria-labelledby="hh-hunt-heading">
+  <div class="hh-wrap">
+    <p class="hh-kicker">Four memories, one beautiful story</p>
+    <h2 class="hh-title" id="hh-hunt-heading">🗺️ Our Love Story Treasure Hunt</h2>
+    <p class="hh-intro">Follow the clues to revisit the little moments that became part of our story. Get each answer right to unlock the next memory! 💞</p>
+    <div class="hh-card">
+      <div id="hh-hunt-game">
+        <div class="hh-progress-row">
+          <span id="hh-hunt-count">Memory 1 of 4</span>
+          <span id="hh-hunt-unlocked">Memories unlocked: 0 🔐</span>
+        </div>
+        <div class="hh-progress" aria-hidden="true"><div class="hh-progress-fill" id="hh-hunt-progress"></div></div>
+        <div class="hh-clue-icon" id="hh-hunt-icon" aria-hidden="true">✨</div>
+        <h3 class="hh-question" id="hh-hunt-question"></h3>
+        <div class="hh-options" id="hh-hunt-options"></div>
+        <p class="hh-feedback" id="hh-hunt-feedback" aria-live="polite"></p>
+        <button class="hh-primary hh-hidden" id="hh-hunt-next" type="button">Unlock next memory →</button>
+      </div>
+      <div id="hh-hunt-finale" class="hh-finale hh-hidden" aria-live="polite">
+        <div class="hh-finale-heart" aria-hidden="true">💖</div>
+        <h3>Treasure found, my love!</h3>
+        <p id="hh-hunt-final-score"></p>
+        <p>Our story is made of little moments, dates, conversations, and memories. But my favourite part is that these moments are ours.</p>
+        <p>Happy Birthday, Naveen. I hope life gives you countless reasons to smile, and I hope I get to celebrate many more beautiful moments with you. 🌷</p>
+        <p><strong>One thing I want you to remember: you are special to me, today and always. ❤️</strong></p>
+        <button class="hh-primary" id="hh-hunt-restart" type="button">Explore our memories again 💕</button>
+      </div>
+    </div>
+    <p class="hh-note">A little journey through the beginning of us. 💌</p>
+  </div>
+</section>
+
+
+
+<script id="heart-hunt-script">
+(function () {
+  function initHeartCall() {
+    const root = document.getElementById("heart-call-surprise");
+    if (!root || root.dataset.ready === "1") return;
+    root.dataset.ready = "1";
+
+    const screen = document.getElementById("hh-call-screen");
+    const status = document.getElementById("hh-call-status");
+    const messagePanel = document.getElementById("hh-call-message");
+    const typedText = document.getElementById("hh-typed-text");
+    const caret = document.getElementById("hh-typed-caret");
+    const answer = document.getElementById("hh-answer-call");
+    const decline = document.getElementById("hh-decline-call");
+    const again = document.getElementById("hh-call-again");
+    const message = "Naveen, if I could keep one moment safe forever, it would be the beginning of our story. From our first appearance to our first meeting, our first call, and our first date, every little memory has become a part of something precious to me. Today is your day, but you are a gift in my life too. I wish you happiness, peace, beautiful dreams, and all the love your heart can hold. Happy Birthday, my favourite person. I hope this little surprise makes you smile, because you deserve so many reasons to. ❤️";
+
+    let timer = null;
+    function typeMessage() {
+      if (timer) window.clearInterval(timer);
+      typedText.textContent = "";
+      caret.classList.remove("hh-hidden");
+      let i = 0;
+      timer = window.setInterval(function () {
+        if (i >= message.length) {
+          window.clearInterval(timer);
+          timer = null;
+          caret.classList.add("hh-hidden");
+          return;
+        }
+        typedText.textContent += message.charAt(i++);
+      }, 32);
+    }
+
+    answer.addEventListener("click", function () {
+      screen.classList.add("hh-hidden");
+      messagePanel.classList.remove("hh-hidden");
+      typeMessage();
+    });
+
+    decline.addEventListener("click", function () {
+      status.textContent = "The heart call is waiting whenever you're ready. 💗";
+    });
+
+    again.addEventListener("click", typeMessage);
+  }
+
+  function initTreasureHunt() {
+    const root = document.getElementById("relationship-treasure-hunt");
+    if (!root || root.dataset.ready === "1") return;
+    root.dataset.ready = "1";
+
+    const memories = [
+      {
+        icon: "✨",
+        clue: "Every story has a first little spark. When did our first appearance happen?",
+        options: ["26 January 2026", "8 February 2026", "26 April 2026"],
+        answer: 0,
+        reveal: "Our first appearance — 26 January 2026. The first little page of our story. ✨"
+      },
+      {
+        icon: "🫶",
+        clue: "The next chapter brought us face to face. When was our first meeting?",
+        options: ["17 March", "8 February 2026", "26 January 2026"],
+        answer: 1,
+        reveal: "Our first meeting — 8 February 2026. A memory worth keeping close. 🫶"
+      },
+      {
+        icon: "📞",
+        clue: "Then came a moment when we heard each other's voice. When was our first call?",
+        options: ["26 April 2026", "8 February 2026", "17 March"],
+        answer: 2,
+        reveal: "Our first call — 17 March. A date that doesn't need a year to feel special. 📞"
+      },
+      {
+        icon: "🌹",
+        clue: "One more memory to unlock: when was our first date?",
+        options: ["26 April 2026", "17 March", "8 February 2026"],
+        answer: 0,
+        reveal: "Our first date — 26 April 2026. And one more beautiful memory in our story. 🌹"
+      }
+    ];
+
+    const game = document.getElementById("hh-hunt-game");
+    const count = document.getElementById("hh-hunt-count");
+    const unlocked = document.getElementById("hh-hunt-unlocked");
+    const progress = document.getElementById("hh-hunt-progress");
+    const icon = document.getElementById("hh-hunt-icon");
+    const question = document.getElementById("hh-hunt-question");
+    const options = document.getElementById("hh-hunt-options");
+    const feedback = document.getElementById("hh-hunt-feedback");
+    const next = document.getElementById("hh-hunt-next");
+    const finale = document.getElementById("hh-hunt-finale");
+    const finalScore = document.getElementById("hh-hunt-final-score");
+    const restart = document.getElementById("hh-hunt-restart");
+    let index = 0;
+    let found = 0;
+    let answered = false;
+
+    function render() {
+      answered = false;
+      const item = memories[index];
+      count.textContent = "Memory " + (index + 1) + " of " + memories.length;
+      unlocked.textContent = "Memories unlocked: " + found + " 🔐";
+      progress.style.width = (index / memories.length * 100) + "%";
+      icon.textContent = item.icon;
+      question.textContent = item.clue;
+      feedback.textContent = "";
+      next.classList.add("hh-hidden");
+      next.textContent = index === memories.length - 1 ? "Reveal the final treasure 💌" : "Unlock next memory →";
+      options.replaceChildren();
+
+      item.options.forEach(function (choiceText, choiceIndex) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "hh-option";
+        button.textContent = choiceText;
+        button.addEventListener("click", function () {
+          if (answered) return;
+          if (choiceIndex !== item.answer) {
+            feedback.textContent = "Not quite, my love. Try another answer to unlock this memory. 💗";
+            button.classList.add("hh-wrong");
+            return;
+          }
+          answered = true;
+          found++;
+          Array.from(options.children).forEach(function (choice) {
+            choice.disabled = true;
+            if (choice === button) choice.classList.add("hh-right");
+          });
+          feedback.textContent = "Memory unlocked! " + item.reveal;
+          unlocked.textContent = "Memories unlocked: " + found + " 🔓";
+          progress.style.width = ((index + 1) / memories.length * 100) + "%";
+          next.classList.remove("hh-hidden");
+        });
+        options.appendChild(button);
+      });
+    }
+
+    next.addEventListener("click", function () {
+      if (!answered) return;
+      if (index < memories.length - 1) {
+        index++;
+        render();
+      } else {
+        game.classList.add("hh-hidden");
+        finale.classList.remove("hh-hidden");
+        finalScore.textContent = "You unlocked all " + found + " special memories. Every one belongs to our story. 💗";
+        progress.style.width = "100%";
+        finale.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+
+    restart.addEventListener("click", function () {
+      index = 0;
+      found = 0;
+      finale.classList.add("hh-hidden");
+      game.classList.remove("hh-hidden");
+      render();
+      root.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    render();
+  }
+
+  function start() {
+    initHeartCall();
+    initTreasureHunt();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();
+</script>
+
+</body>
+</html>
